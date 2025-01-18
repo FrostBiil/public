@@ -97,10 +97,10 @@ Here are some of the programming languages, tools, and frameworks I've used acro
 Below is an overview of some of the projects in this repository. For a complete list, explore the directory structure above or use the `README.md` files within each folder.
 
 ### 🐍 Python Projects (Located in python/)
-- No current published projects
+- Currently, there are no published projects in this section, but stay tuned! I'm actively working on exciting projects, and they will be added here soon. 😊
 
-### 🟦 C# Projects (Located in c#/)
-- No current published projects
+### 🟦 C# Projects (Located in cs/)
+- [VR Escape Room](cs/EscapeRoom-main): A virtual reality escape room game built using C#. Players must solve puzzles to navigate and escape a maze, with gameplay inspired by the style of [Portal](https://store.steampowered.com/app/400/Portal/). This game was developed in [Unity](https://unity.com/) as part of a collaborative project with [BapllStar](https://github.com/BapllStar), [Julian33](https://github.com/julian33), [Marcusbandit](https://github.com/marcusbandit), and [Nekoman69](https://github.com/Nekoman69).
   
 ### 🦖 C++ Projects (Located in `cpp/`)
 - **[AxeGame](cpp/AxeGame/)**: A simple game using fundamentals of C++, where you avoid being hit by a ball. The game is made using the library [raylib](https://www.raylib.com/).
@@ -108,15 +108,17 @@ Below is an overview of some of the projects in this repository. For a complete 
 
 ### 🌀 JavaScript/TypeScript Projects (Located in `js/`)
 - **[Programming B Exam Project](js/ProgrammingBExamProject/)**: A web application similar to GitHub or itch.io, designed for users to publish and share their games. Built using [React](https://react.dev/) with the [Mantine](https://mantine.dev/) library for the UI and [Primsa](https://www.prisma.io/) for the server-side logic. This project was developed in collaboration with another student, [JanuZz](https://github.com/JanuZz), where I primarily contributed to the frontend development.
+- **[Space Invaders](js/SpaceInvaders)**: A simple recreation of the classic Space Invaders game, developed as a school project using JavaScript and the [p5.js](https://p5js.org/) library. The game features basic mechanics where players control a spaceship to shoot down incoming enemies. This project helped me explore game development fundamentals, including animation, collision detection, and player controls.
 
 ### 🌐 HTML/CSS Projects (Located in HTML/CSS/)
-- No current published projects
+- Currently, there are no published projects in this section, but stay tuned! I'm actively working on exciting projects, and they will be added here soon. 😊
 
 ### ☕ Java Projects (Located in java/)
-- **[Breakout](java/Breakout)**: Publishes soon.
+- **[Breakout](java/Breakout)**: This project is currently in progress and will be published soon. Expected Release Date: 23/01/2025. Stay tuned for a classic recreation of the Breakout game built in Java, showcasing object-oriented programming principles and fun gameplay mechanics.
+
 
 ### 🗃️ SQL Projects (Located in sql/)
-- No current published projects
+- Currently, there are no published projects in this section, but stay tuned! I'm actively working on exciting projects, and they will be added here soon. 😊
 
 ---
 
