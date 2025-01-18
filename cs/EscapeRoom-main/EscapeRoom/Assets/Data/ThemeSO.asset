@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de42dd465b92914e88376b61500c23a, type: 3}
+  m_Name: ThemeSO
+  m_EditorClassIdentifier: 
+  primary_bg: {r: 0.28627452, g: 0.21960784, b: 0.2627451, a: 1}
+  primary_text: {r: 0.7137255, g: 0.7803922, b: 0.7372549, a: 1}
+  secondary_bg: {r: 0.38039216, g: 0.59607846, b: 0.5568628, a: 1}
+  secondary_text: {r: 0.6196078, g: 0.4039215, b: 0.4431372, a: 1}
+  tertiary_bg: {r: 0.627451, g: 0.69803923, b: 0.6509804, a: 1}
+  tertiary_text: {r: 0.6196078, g: 0.4039215, b: 0.4431372, a: 1}
+  quaternary_bg: {r: 0.79607844, g: 0.7490196, b: 0.73333335, a: 1}
+  quaternary_text: {r: 0.2039216, g: 0.2509804, b: 0.2666667, a: 1}
+  quinary_bg: {r: 0.91764706, g: 0.7411765, b: 0.65882355, a: 1}
+  quinary_text: {r: 0.0823529, g: 0.2588235, b: 0.3411765, a: 1}
+  disable: {r: 1, g: 1, b: 1, a: 1}
