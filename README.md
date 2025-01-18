@@ -1,4 +1,4 @@
-# 🚀 My Programming Journey: Projects from High School to Today
+# 🚀 My Programming Journey: Projects from my career and free time
 
 Welcome to my **Programming Portfolio**! This repository is a collection of projects I've worked on throughout my career as a programmer, starting from high school (Gymnasium) to university, and in my free time. These projects span a variety of programming languages, frameworks, and technologies, reflecting my growth and passion for coding.
 
