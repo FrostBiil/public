@@ -1,0 +1,104 @@
+{
+  "name": "monolith-express-react",
+  "version": "1.0.0",
+  "description": "Monolithic Express + React Boilerplate with TypeScript and Vercel ❤",
+  "private": true,
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node build-server/index.js",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build:client && npm run build:server",
+    "studio": "prisma studio",
+    "deploy": "vercel --prod",
+    "dev:server": "nodemon",
+    "dev:client": "cross-env PORT=5000 react-scripts start",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:client": "react-scripts build",
+    "test:client": "react-scripts test",
+    "eject:client": "react-scripts eject",
+    "cleanup": "rm -rf build/api",
+    "postbuild": "react-snap; npm run cleanup"
+  },
+  "author": "Sutan Nasution <contact@sutanlab.id>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sutanlab/monolith-express-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sutanlab/monolith-express-react/issues"
+  },
+  "reactSnap": {
+    "source": "build",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": true
+    },
+    "puppeteerExitOnPageError": false,
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@mantine/carousel": "^7.6.1",
+    "@mantine/core": "^7.6.1",
+    "@mantine/dropzone": "^7.6.1",
+    "@mantine/form": "^7.6.1",
+    "@mantine/hooks": "^7.6.1",
+    "@mantine/notifications": "^7.6.1",
+    "@mantine/nprogress": "^7.6.1",
+    "@mantine/spotlight": "^7.6.1",
+    "@prisma/client": "^5.10.2",
+    "@quixo3/prisma-session-store": "^3.1.13",
+    "@tabler/icons-react": "^3.1.0",
+    "@types/react-router-dom": "^5.3.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "embla-carousel-react": "^8.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.18.0",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/express-session": "^1.18.0",
+    "@types/passport": "^1.0.16",
+    "@types/passport-github2": "^1.2.9",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.0",
+    "postcss": "^8.4.35",
+    "postcss-preset-mantine": "^1.13.0",
+    "postcss-simple-vars": "^7.0.1",
+    "prisma": "^5.10.2",
+    "ts-node": "^10.9.2"
+  }
+}

@@ -1,0 +1,100 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DB_CONNECTION")
+  shadowDatabaseUrl = env("DB_CONNECTION")
+}
+
+enum GameType {
+  Executable
+  Web
+}
+
+enum Genre {
+  Action
+  Adventure
+  Casual
+  Indie
+  MassivelyMultiplayer
+  Racing
+  RPG
+  Simulation
+  Sports
+  Strategy
+}
+
+enum Visibility {
+  Public
+  Private
+}
+
+model Session {
+  id        String   @id
+  sid       String   @unique
+  data      String?
+  expiresAt DateTime
+}
+
+model User {
+  id          String @unique
+  accessToken String @unique
+
+  displayName String
+  username    String
+  email       String
+
+  photo String?
+
+  company  String?
+  location String?
+
+  joinedAt DateTime @default(now())
+
+  ownedGames     GameOwner[]
+  publishedGames Game[]
+}
+
+model GameOwner {
+  id   String @id @default(cuid())
+  game Game   @relation(fields: [gameId], references: [id], onDelete: Cascade)
+  user User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  gameId String
+  userId String
+
+  date DateTime @default(now()) 
+
+  @@unique([gameId, userId])
+}
+
+model Game {
+  id String @id @unique @default(cuid())
+
+  releaseDate DateTime @default(now())
+  lastUpdated DateTime @updatedAt
+
+  publisherId String
+  publisher   User        @relation(fields: [publisherId], references: [id], onDelete: Cascade)
+  owners      GameOwner[]
+
+  projectUrl  String
+  title       String
+  description String @default("")
+
+  tags   String[]
+  genres Genre[]
+
+  cover       String
+  screenshots String[]
+
+  visibility Visibility @default(Public)
+}
