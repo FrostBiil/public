@@ -37,6 +37,7 @@ My goal with this repository is to:
 
 The repository is organized into different section based on the programming language, reflecting my understanding and my development journey in each:
 
+``` plaintext
 public/
 │
 ├── python/
@@ -60,7 +61,7 @@ public/
 │
 └── SQL/
     ├── 
-
+```
 
 ---
 
