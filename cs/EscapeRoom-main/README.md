@@ -1,4 +1,4 @@
-# EscapeRoom
+# Escape Room
 
 A brief description of the VR Unity project.
 
