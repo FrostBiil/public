@@ -1,4 +1,4 @@
-# Project Name
+# Classy Clash
 
 A brief description of the project.
 
