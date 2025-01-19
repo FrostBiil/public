@@ -1,5 +1,5 @@
 # Programming B, Exam Project
-Grade 12 (A)
+Grade: 12 (A)
 
 A brief description of the project.
 
