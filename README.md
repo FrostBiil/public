@@ -48,6 +48,7 @@ public/
 │
 ├── c++/ 
 │   ├── AxeGame
+|   ├── ClashyClash
 |   ├── dasher-dapper
 │
 ├── JavaScript/TypeScript 
@@ -105,6 +106,7 @@ Below is an overview of some of the projects in this repository. For a complete 
   
 ### 🦖 C++ Projects (Located in `cpp/`)
 - **[AxeGame](cpp/AxeGame/)**: A simple game using fundamentals of C++, where you avoid being hit by a ball. The game is made using the library [raylib](https://www.raylib.com/).
+- **[Clashy Clash](cpp/AxeGame/)**: An intermidiate game project using C++. The project demonstates the use of abstract classes, pointers, usage of spritesheets and animations. The game is made using the library [raylib](https://www.raylib.com/).
 - **[dapper-dasher](cpp/dapper-dasher/)**: A simple game using the basics of C++, here you avoid being hit by nebulas as the character scarfy. The game is made using the library [raylib](https://www.raylib.com/).
 
 ### 🌀 JavaScript/TypeScript Projects (Located in `js/`)
