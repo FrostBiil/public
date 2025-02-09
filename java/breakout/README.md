@@ -13,7 +13,7 @@
 This project is a JavaFX-based Breakout game, developed as part of a three-week exam project at the Technical University of Denmark (DTU). The goal of the project was to implement object-oriented programming (OOP) principles, game physics, and JavaFX for graphical representation. The project was split into making a basic and advanced version.
 
 ## 👨‍💻 Group Members
-* [FrostBiil](https://github.com/FrostBiil) (Me)
+* [FrostBiil](https://github.com/FrostBiil)
 * [Bondesgaard](https://github.com/bondegaard)
 * [Skytiger1](https://github.com/skytiger1)
 * [Lobehjulius](https://github.com/Lobehjulius)
