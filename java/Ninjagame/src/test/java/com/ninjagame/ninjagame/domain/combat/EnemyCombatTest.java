@@ -2,7 +2,9 @@ package com.ninjagame.ninjagame.domain.combat;
 
 import com.ninjagame.ninjagame.domain.ninja.Ninja;
 import com.ninjagame.ninjagame.domain.ninja.NinjaClass;
+import com.ninjagame.ninjagame.domain.ninja.PlayerNinja;
 import com.ninjagame.ninjagame.domain.player.Player;
+import com.ninjagame.ninjagame.domain.weapon.PlayerWeapon;
 import com.ninjagame.ninjagame.domain.weapon.Weapon;
 import com.ninjagame.ninjagame.domain.weapon.WeaponType;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,8 +16,8 @@ class EnemyCombatTest {
 
     private EnemyCombat enemyCombat;
     private PlayerCombat enemyPlayerCombat;
-    private Ninja attacker1, attacker2, attacker3;
-    private Ninja defender1, defender2, defender3;
+    private PlayerNinja attacker1, attacker2, attacker3;
+    private PlayerNinja defender1, defender2, defender3;
 
     @BeforeEach
     void setUp() {
@@ -23,21 +25,21 @@ class EnemyCombatTest {
         Player player = new Player("EnemyAI", 10, 500, null);
 
         // Create 3 attacking ninjas for the AI
-        attacker1 = new Ninja("Shadow Assassin", NinjaClass.ASSASSIN, 80, 100, 20, 100, null, new Weapon("Dagger", WeaponType.TANTO, 30, null, null));
-        attacker2 = new Ninja("Silent Marksman", NinjaClass.MARKSMAN, 70, 90, 15, 90, null, new Weapon("Bow", WeaponType.LONGBOW, 40, null, null));
-        attacker3 = new Ninja("Fierce Samurai", NinjaClass.SAMURAI, 100, 110, 25, 110, null, new Weapon("Katana", WeaponType.KATANA, 50, null, null));
+        attacker1 = new PlayerNinja("Shadow Assassin", NinjaClass.ASSASSIN, 80, 100, 20, 100, null, new Weapon("Dagger", WeaponType.TANTO, 30, null, null));
+        attacker2 = new PlayerNinja("Silent Marksman", NinjaClass.MARKSMAN, 70, 90, 15, 90, null, new Weapon("Bow", WeaponType.LONGBOW, 40, null, null));
+        attacker3 = new PlayerNinja("Fierce Samurai", NinjaClass.SAMURAI, 100, 110, 25, 110, null, new Weapon("Katana", WeaponType.KATANA, 50, null, null));
 
         // AI enemy team (3 ninjas)
-        Ninja[] enemyNinjas = {attacker1, attacker2, attacker3};
+        PlayerNinja[] enemyNinjas = {attacker1, attacker2, attacker3};
         enemyCombat = new EnemyCombat(player, enemyNinjas);
 
         // Create 3 defending ninjas
-        defender1 = new Ninja("Rival Assassin", NinjaClass.ASSASSIN, 75, 100, 20, 100, null, new Weapon("Short Sword", WeaponType.TANTO, 25, null, null));
-        defender2 = new Ninja("Rival Marksman", NinjaClass.MARKSMAN, 65, 85, 15, 90, null, new Weapon("Crossbow", WeaponType.LONGBOW, 35, null, null));
-        defender3 = new Ninja("Rival Samurai", NinjaClass.SAMURAI, 95, 105, 25, 110, null, new Weapon("Naginata", WeaponType.KATANA, 45, null, null));
+        defender1 = new PlayerNinja("Rival Assassin", NinjaClass.ASSASSIN, 75, 100, 20, 100, null, new Weapon("Short Sword", WeaponType.TANTO, 25, null, null));
+        defender2 = new PlayerNinja("Rival Marksman", NinjaClass.MARKSMAN, 65, 85, 15, 90, null, new Weapon("Crossbow", WeaponType.LONGBOW, 35, null, null));
+        defender3 = new PlayerNinja("Rival Samurai", NinjaClass.SAMURAI, 95, 105, 25, 110, null, new Weapon("Naginata", WeaponType.KATANA, 45, null, null));
 
         // Enemy team (defenders)
-        Ninja[] enemyDefenders = {defender1, defender2, defender3};
+        PlayerNinja[] enemyDefenders = {defender1, defender2, defender3};
         enemyPlayerCombat = new PlayerCombat(new Player("Player1", 10, 500, null), enemyDefenders);
     }
 
@@ -88,7 +90,7 @@ class EnemyCombatTest {
         defender2.setHealth(100);
         defender3.setHealth(100);
 
-        Ninja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker3);
+        PlayerNinja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker3);
         assertEquals(defender1, selectedTarget);
     }
 
@@ -99,7 +101,7 @@ class EnemyCombatTest {
         defender2.setHealth(80);
         defender3.setHealth(100);
 
-        Ninja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker3);
+        PlayerNinja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker3);
         assertEquals(defender1, selectedTarget);
     }
 
@@ -113,7 +115,7 @@ class EnemyCombatTest {
         defender1.setWeaponEquipped(new Weapon("Short Sword", WeaponType.TANTO, 20, null, null));
         defender2.setWeaponEquipped(new Weapon("Enhanced Crossbow", WeaponType.LONGBOW, 60, null, null));
 
-        Ninja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker1);
+        PlayerNinja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker1);
         assertEquals(defender2, selectedTarget); // Since it takes more damage
     }
 
@@ -128,7 +130,7 @@ class EnemyCombatTest {
         defender2.setWeaponEquipped(new Weapon("Enhanced Crossbow", WeaponType.LONGBOW, 60, null, null));
         defender3.setWeaponEquipped(new Weapon("Naginata", WeaponType.KATANA, 40, null, null));
 
-        Ninja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker2);
+        PlayerNinja selectedTarget = enemyCombat.chooseEnemyTarget(enemyPlayerCombat, attacker2);
 
         // Fixing the expected value: Samurai has the highest effective attack
         assertEquals(defender3, selectedTarget);

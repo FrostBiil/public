@@ -101,4 +101,9 @@ public enum WeaponType {
     public String toPrettyString() {
         return name().charAt(0) + name().substring(1).toLowerCase().replace("_", " ");
     }
+
+    public boolean isAllowedFor(String ninjaClass) {
+        return Arrays.asList(classes).contains(ninjaClass);
+    }
+
 }

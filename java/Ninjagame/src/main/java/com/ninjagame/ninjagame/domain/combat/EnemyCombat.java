@@ -2,6 +2,7 @@ package com.ninjagame.ninjagame.domain.combat;
 
 import com.ninjagame.ninjagame.domain.ninja.Ninja;
 import com.ninjagame.ninjagame.domain.ninja.NinjaClass;
+import com.ninjagame.ninjagame.domain.ninja.PlayerNinja;
 import com.ninjagame.ninjagame.domain.player.Player;
 import lombok.Getter;
 
@@ -9,9 +10,9 @@ public class EnemyCombat {
     @Getter
     private Player player;
     @Getter
-    private Ninja[] ninjas;
+    private PlayerNinja[] ninjas;
 
-    public EnemyCombat(Player player, Ninja[] ninjas) {
+    public EnemyCombat(Player player, PlayerNinja[] ninjas) {
         this.player = player;
 
         if (ninjas.length != 3) {
@@ -28,13 +29,13 @@ public class EnemyCombat {
      * 3. If no type advantage, picks a ninja of the same type as an enemy if possible.
      * 4. If no same-type match exists, picks the first available ninja.
      */
-    public Ninja chooseAttackingNinja(PlayerCombat enemyCombat) {
-        Ninja bestSameTypeAttacker = null;
+    public PlayerNinja chooseAttackingNinja(PlayerCombat enemyCombat) {
+        PlayerNinja bestSameTypeAttacker = null;
         double highestSameTypeAttack = 0;
-        Ninja bestOverallAttacker = null;
+        PlayerNinja bestOverallAttacker = null;
         double highestOverallAttack = 0;
 
-        for (Ninja attacker : ninjas) {
+        for (PlayerNinja attacker : ninjas) {
             if (attacker.getHealth() <= 0) continue; // Skip dead ninjas
 
             double baseAttack = attacker.getStrength() + attacker.getWeaponDamage(); // ✅ No NullPointerException
@@ -69,12 +70,12 @@ public class EnemyCombat {
      * 2. If multiple weak targets exist, attack the lowest HP.
      * 3. If no weak target exists, attack the enemy with the highest expected damage taken.
      */
-    public Ninja chooseEnemyTarget(PlayerCombat enemyCombat, Ninja attacker) {
-        Ninja bestTarget = null;
+    public PlayerNinja chooseEnemyTarget(PlayerCombat enemyCombat, PlayerNinja attacker) {
+        PlayerNinja bestTarget = null;
         double lowestHealth = Double.MAX_VALUE;
         double maxDamage = 0;
 
-        for (Ninja defender : enemyCombat.getNinjas()) {
+        for (PlayerNinja defender : enemyCombat.getNinjas()) {
             if (defender.getHealth() <= 0) continue;
 
             double damageMultiplier = getTypeMultiplier(attacker, defender);
@@ -93,7 +94,7 @@ public class EnemyCombat {
 
         // If no type advantage, pick the target taking the most damage
         if (bestTarget == null) {
-            for (Ninja defender : enemyCombat.getNinjas()) {
+            for (PlayerNinja defender : enemyCombat.getNinjas()) {
                 if (defender.getHealth() <= 0) continue;
 
                 double attackDamage = attacker.getWeaponDamage();

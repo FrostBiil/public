@@ -22,4 +22,8 @@ public class Weapon {
         this.rarity = rarity;
         this.allowedNinjaClasses = allowedNinjaClasses;
     }
+
+    public double getAttackPower() {
+        return getDamage();
+    }
 }

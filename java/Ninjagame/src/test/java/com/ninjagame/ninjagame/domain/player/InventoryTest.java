@@ -1,9 +1,14 @@
 package com.ninjagame.ninjagame.domain.player;
 
+import com.ninjagame.ninjagame.domain.ninja.PlayerNinja;
+import com.ninjagame.ninjagame.domain.weapon.PlayerWeapon;
+import com.ninjagame.ninjagame.domain.ninja.NinjaClass;
+import com.ninjagame.ninjagame.domain.weapon.WeaponType;
+import com.ninjagame.ninjagame.domain.weapon.Weapon;
+import com.ninjagame.ninjagame.domain.Rarity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Collections;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,10 +23,14 @@ class InventoryTest {
 
     @Test
     void testInventoryInitialization() {
-        assertEquals(500, inventory.getCoins());
-        assertEquals(50, inventory.getGems());
-        assertNull(inventory.getWeapons(), "Weapons list should be null initially");
-        assertNull(inventory.getNinjas(), "Ninjas list should be null initially");
+        assertEquals(500, inventory.getCoins(), "Initial coin balance should be 500.");
+        assertEquals(50, inventory.getGems(), "Initial gem balance should be 50.");
+
+        assertNotNull(inventory.getWeapons(), "Weapons list should be initialized.");
+        assertTrue(inventory.getWeapons().isEmpty(), "Weapons list should be empty initially.");
+
+        assertNotNull(inventory.getNinjas(), "Ninjas list should be initialized.");
+        assertTrue(inventory.getNinjas().isEmpty(), "Ninjas list should be empty initially.");
     }
 
     @Test
@@ -37,32 +46,62 @@ class InventoryTest {
     }
 
     @Test
-    void testManageWeapons() {
-        List<PlayerWeapon> weapons = new ArrayList<>();
-        weapons.add(new PlayerWeapon());  // Assuming PlayerWeapon has a no-arg constructor
-        inventory.setWeapons(weapons);
+    void testAddWeaponToInventory() {
+        Weapon baseWeapon = new Weapon("Kunai", WeaponType.KUNAI, 35, Rarity.UNCOMMON, Collections.singletonList("Assassin"));
+        PlayerWeapon playerWeapon = new PlayerWeapon(1, baseWeapon, inventory);
+
+        inventory.addWeapon(playerWeapon);
+
         assertNotNull(inventory.getWeapons());
         assertEquals(1, inventory.getWeapons().size());
+        assertEquals(playerWeapon, inventory.getWeapons().get(0));
     }
 
     @Test
-    void testManageNinjas() {
-        List<PlayerNinja> ninjas = new ArrayList<>();
-        ninjas.add(new PlayerNinja());  // Assuming PlayerNinja has a no-arg constructor
-        inventory.setNinjas(ninjas);
+    void testAddNinjaToInventory() {
+        PlayerNinja ninja = new PlayerNinja(1, "Shadow", NinjaClass.ASSASSIN, 50, 200, 30, 100, Rarity.EPIC, null);
+
+        inventory.addNinja(ninja);
+
         assertNotNull(inventory.getNinjas());
         assertEquals(1, inventory.getNinjas().size());
+        assertEquals(ninja, inventory.getNinjas().get(0));
     }
 
     @Test
-    void testSetNullWeapons() {
+    void testRemoveWeapon() {
+        Weapon baseWeapon = new Weapon("Shuriken", WeaponType.SHURIKEN, 40, Rarity.RARE, Collections.singletonList("Assassin"));
+        PlayerWeapon playerWeapon = new PlayerWeapon(2, baseWeapon, inventory);
+
+        inventory.addWeapon(playerWeapon);
+        assertEquals(1, inventory.getWeapons().size());
+
+        inventory.getWeapons().remove(playerWeapon);
+        assertEquals(0, inventory.getWeapons().size());
+    }
+
+    @Test
+    void testRemoveNinja() {
+        PlayerNinja ninja = new PlayerNinja(2, "Storm", NinjaClass.SAMURAI, 60, 250, 40, 90, Rarity.LEGENDARY, null);
+
+        inventory.addNinja(ninja);
+        assertEquals(1, inventory.getNinjas().size());
+
+        inventory.getNinjas().remove(ninja);
+        assertEquals(0, inventory.getNinjas().size());
+    }
+
+    @Test
+    void testSetNullWeaponsShouldResetToEmptyList() {
         inventory.setWeapons(null);
-        assertNull(inventory.getWeapons(), "Weapons list should be null when set to null");
+        assertNotNull(inventory.getWeapons(), "Weapons list should be initialized even when set to null.");
+        assertTrue(inventory.getWeapons().isEmpty(), "Weapons list should reset to empty instead of null.");
     }
 
     @Test
-    void testSetNullNinjas() {
+    void testSetNullNinjasShouldResetToEmptyList() {
         inventory.setNinjas(null);
-        assertNull(inventory.getNinjas(), "Ninjas list should be null when set to null");
+        assertNotNull(inventory.getNinjas(), "Ninjas list should be initialized even when set to null.");
+        assertTrue(inventory.getNinjas().isEmpty(), "Ninjas list should reset to empty instead of null.");
     }
 }

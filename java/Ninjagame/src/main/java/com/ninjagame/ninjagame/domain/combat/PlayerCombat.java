@@ -1,20 +1,20 @@
 package com.ninjagame.ninjagame.domain.combat;
 
 import com.ninjagame.ninjagame.domain.ninja.Ninja;
+import com.ninjagame.ninjagame.domain.ninja.PlayerNinja;
 import com.ninjagame.ninjagame.domain.player.Player;
 import lombok.Getter;
 
 import java.util.Arrays;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class PlayerCombat {
     @Getter
     private Player player;
     @Getter
-    private Ninja[] ninjas;
+    private PlayerNinja[] ninjas;
 
-    public PlayerCombat(Player player, Ninja[] ninjas) {
+    public PlayerCombat(Player player, PlayerNinja[] ninjas) {
         this.player = player;
 
         if (ninjas.length != 3) {
@@ -24,16 +24,16 @@ public class PlayerCombat {
         this.ninjas = ninjas;
     }
 
-    public Ninja chooseAttackingNinja(String ninjaName) {
+    public PlayerNinja chooseAttackingNinja(String ninjaName) {
         return getValidNinja(ninjaName, ninjas);
     }
 
-    public Ninja chooseEnemyTarget(EnemyCombat enemyCombat, String ninjaName) {
+    public PlayerNinja chooseEnemyTarget(EnemyCombat enemyCombat, String ninjaName) {
         return getValidNinja(ninjaName, enemyCombat.getNinjas());
     }
 
 
-    private Ninja getValidNinja(String name, Ninja[] ninjas) {
+    private PlayerNinja getValidNinja(String name, PlayerNinja[] ninjas) {
         return Arrays.stream(ninjas)
                 .filter(n -> n.getName().equals(name) && n.getHealth() > 0)
                 .findFirst()
