@@ -1,0 +1,101 @@
+{
+  "name": "level_4",
+  "nextLevel": "level_5",
+  "paddleWidth": 170,
+  "ballSpeed": 1.1,
+  "availablePowerUps": [],
+  "powerUpSpeed": 0.0001,
+  "paddleSpeed": 1.3,
+  "levelMap": {
+    "levelRows": [
+      {
+        "row": [
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED"
+        ]
+      },
+      {
+        "row": [
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW"
+        ]
+      },
+      {
+        "row": [
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED"
+        ]
+      },
+      {
+        "row": [
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW"
+        ]
+      },
+      {
+        "row": [
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED"
+        ]
+      },
+      {
+        "row": [
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW"
+        ]
+      },
+      {
+        "row": [
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED",
+          "",
+          "RED"
+        ]
+      },
+      {
+        "row": [
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW",
+          "GREEN",
+          "GREEN",
+          "YELLOW"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+    "name": "level_5",
+    "nextLevel": "level_6",
+    "paddleWidth": 160,
+    "ballSpeed": 1.2,
+    "availablePowerUps": [],
+    "powerUpSpeed": 0.0001,
+    "paddleSpeed": 1.4,
+    "levelMap": {
+        "levelRows": [
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "",
+                    "GREEN",
+                    "",
+                    "GREEN",
+                    "",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "",
+                    "GREEN",
+                    "",
+                    "GREEN",
+                    "",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "",
+                    "GREEN",
+                    "",
+                    "GREEN",
+                    "",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "",
+                    "GREEN",
+                    "",
+                    "GREEN",
+                    "",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "",
+                    "GREEN",
+                    "",
+                    "GREEN",
+                    "",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            }
+        ]
+    }
+}

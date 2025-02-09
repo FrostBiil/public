@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="breakout-advance:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/breakout_advance_jar</output-path>
+    <root id="archive" name="breakout-advance.jar">
+      <element id="module-output" name="breakout-advance" />
+      <element id="directory" name="src">
+        <element id="module-source" name="breakout-advance" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/README.md" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/deppendencies/gson-2.11.0.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/readme.txt" />
+    </root>
+  </artifact>
+</component>

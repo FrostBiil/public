@@ -1,0 +1,90 @@
+{
+    "name": "level_10",
+    "nextLevel": "level_11",
+    "paddleWidth": 125,
+    "ballSpeed": 1.45,
+    "availablePowerUps": [],
+    "powerUpSpeed": 0.0001,
+    "paddleSpeed": 1.9,
+    "levelMap": {
+        "levelRows": [
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "GREEN",
+                    "GREEN",
+                    "YELLOW",
+                    "GREEN",
+                    "GREEN",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "GREEN",
+                    "GREEN",
+                    "YELLOW",
+                    "GREEN",
+                    "GREEN",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            },
+            {
+                "row": [
+                    "YELLOW",
+                    "GREEN",
+                    "GREEN",
+                    "YELLOW",
+                    "GREEN",
+                    "GREEN",
+                    "YELLOW"
+                ]
+            },
+            {
+                "row": [
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED",
+                    "",
+                    "RED"
+                ]
+            }
+        ]
+    }
+}

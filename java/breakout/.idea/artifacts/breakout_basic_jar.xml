@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="breakout-basic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/breakout_basic_jar</output-path>
+    <root id="archive" name="breakout-basic.jar">
+      <element id="module-output" name="breakout-basic" />
+      <element id="file-copy" path="$PROJECT_DIR$/README.md" />
+      <element id="directory" name="src">
+        <element id="module-source" name="breakout-basic" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/readme.txt" />
+    </root>
+  </artifact>
+</component>
