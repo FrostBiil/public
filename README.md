@@ -59,7 +59,7 @@ public/
 │   ├── 
 │
 ├── Java 
-│   ├── 
+│   ├── Ninjagame
 │
 └── SQL/
     ├── 
@@ -118,7 +118,7 @@ Below is an overview of some of the projects in this repository. For a complete 
 
 ### ☕ Java Projects (Located in java/)
 - **[Breakout](java/Breakout)**: This project is currently in progress and will be published soon. Expected Release Date: 23/01/2025. Stay tuned for a classic recreation of the Breakout game built in Java, showcasing object-oriented programming principles and fun gameplay mechanics.
-
+- **[Ninjagame](java/Ninjagame)**: A turn-based combat game designed to implement Test-Driven Development (TDD) using JUnit 4/5. The game follows a structured testing approach to ensure combat logic, enemy AI, and player interactions work as expected.
 
 ### 🗃️ SQL Projects (Located in sql/)
 - Currently, there are no published projects in this section, but stay tuned! I'm actively working on exciting projects, and they will be added here soon. 😊
