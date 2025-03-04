@@ -16,7 +16,7 @@ Welcome to my **Programming Portfolio**! This repository is a collection of proj
   - [HTML/CSS](#-htmlcss-projects-located-in-htmlcss)
   - [Java](#-java-projects-located-in-java)
   - [SQL](#%EF%B8%8F-sql-projects-located-in-sql)
-- [How to Use This Repository](#how-to-use-this-repository)
+- [How to Use This Repository](#%EF%B8%8F-how-to-use-this-repository)
 - [Contact Me](#contact-me)
 
 ---
