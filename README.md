@@ -12,7 +12,7 @@ Welcome to my **Programming Portfolio**! This repository is a collection of proj
   - [Python](#-python-projects-located-in-python)
   - [C#](#-c-projects-located-in-cs)
   - [C++](#-c-projects-located-in-cpp)
-  - [JavaScript/TypeScript](#-javascripttypescript-projects)
+  - [JavaScript/TypeScript](#-javascripttypescript-projects-located-in-js)
   - [HTML/CSS](#-htmlcss-projects)
   - [Java](#-java-projects)
   - [SQL](#-sql-projects)
