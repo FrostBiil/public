@@ -84,9 +84,9 @@ Here are some of the programming languages, tools, and frameworks I've used acro
 ### Tools & Frameworks
 - **Unity, .net-frameworks** (C#)
 - **Unreal Engine** (C++)
-- **React.js / vue.js** (JavaScript/TypeScript)
+- **React, React-Native, vue, nest** (JavaScript/TypeScript)
 - **Node.js** (JavaScript)
-- **PyTorch** (Python)
+- **PyTorch, Numpy, Sympy** (Python)
 - **Git / GitHub**
 
 ### Other Technologies
