@@ -7,7 +7,7 @@ Welcome to my **Programming Portfolio**! This repository is a collection of proj
 ## 📖 Table of Contents
 - [About](#-about)
 - [Structure](#%EF%B8%8F-structure)
-- [Technologies Used](#technologies-used)
+- [Technologies Used](#%EF%B8%8F-technologies-used)
 - [Projects](#projects)
   - [Python](#-python-projects)
   - [C#](#-c-projects)
