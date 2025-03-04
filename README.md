@@ -90,7 +90,7 @@ Here are some of the programming languages, tools, and frameworks I've used acro
 - **Git / GitHub**
 
 ### Other Technologies
-- **Databases** (PostgreSQL)
+- **Databases** (Prisma, PostgreSQL, SQLite)
 - **Version Control** (Git)
 
 ---
