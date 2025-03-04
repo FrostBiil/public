@@ -13,7 +13,7 @@ Welcome to my **Programming Portfolio**! This repository is a collection of proj
   - [C#](#-c-projects-located-in-cs)
   - [C++](#-c-projects-located-in-cpp)
   - [JavaScript/TypeScript](#-javascripttypescript-projects-located-in-js)
-  - [HTML/CSS](#-htmlcss-projects)
+  - [HTML/CSS](#-htmlcss-projects-located-in-htmlcss)
   - [Java](#-java-projects)
   - [SQL](#-sql-projects)
 - [How to Use This Repository](#how-to-use-this-repository)
