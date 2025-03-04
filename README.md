@@ -17,7 +17,7 @@ Welcome to my **Programming Portfolio**! This repository is a collection of proj
   - [Java](#-java-projects-located-in-java)
   - [SQL](#%EF%B8%8F-sql-projects-located-in-sql)
 - [How to Use This Repository](#%EF%B8%8F-how-to-use-this-repository)
-- [Contact Me](#contact-me)
+- [Contact Me](#-contact-me)
 
 ---
 
