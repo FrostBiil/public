@@ -55,15 +55,9 @@ public/
 │   ├── ProgrammingBExamProject
 │   ├── SpaceInvaders
 │
-├── HTML/CSS 
-│   ├── 
-│
 ├── Java 
 │   ├── breakout
 │   ├── Ninjagame
-│
-└── SQL/
-    ├── 
 ```
 
 ---
@@ -82,12 +76,12 @@ Here are some of the programming languages, tools, and frameworks I've used acro
 - **SQL**
 
 ### Tools & Frameworks
-- **Unity, .net-frameworks** (C#)
+- **Unity, .net-frameworks (Xamerin, MAUI, ASP, ect.)** (C#)
 - **Unreal Engine** (C++)
 - **React, React-Native, vue, nest** (JavaScript/TypeScript)
 - **Node.js** (JavaScript)
 - **PyTorch, Numpy, Sympy** (Python)
-- **GitHub, GitLab**
+- **GitHub, GitLab** (Git)
 
 ### Other Technologies
 - **Databases** (Prisma, PostgreSQL, SQLite)
@@ -114,15 +108,9 @@ Below is an overview of some of the projects in this repository. For a complete 
 - **[Programming B Exam Project](js/ProgrammingBExamProject/)**: A web application similar to GitHub or itch.io, designed for users to publish and share their games. Built using [React](https://react.dev/) with the [Mantine](https://mantine.dev/) library for the UI and [Primsa](https://www.prisma.io/) for the server-side logic. This project was developed in collaboration with another student, [JanuZz](https://github.com/JanuZz), where I primarily contributed to the frontend development.
 - **[Space Invaders](js/SpaceInvaders)**: A simple recreation of the classic Space Invaders game, developed as a school project using JavaScript and the [p5.js](https://p5js.org/) library. The game features basic mechanics where players control a spaceship to shoot down incoming enemies. This project helped me explore game development fundamentals, including animation, collision detection, and player controls.
 
-### 🌐 HTML/CSS Projects (Located in HTML/CSS/)
-- Currently, there are no published projects in this section, but stay tuned! I'm actively working on exciting projects, and they will be added here soon. 😊
-
 ### ☕ Java Projects (Located in java/)
 - **[Breakout](java/Breakout)**: A classic brick-breaking game developed in Java as a 3-week university project. It features paddle and ball mechanics, multiple levels, power-ups, and collision handling, with a focus on object-oriented design and game physics. Developed in collaboration with [Bondesgaard](https://github.com/bondegaard), [Skytiger1](https://github.com/skytiger1) & [Lobehjulius](https://github.com/Lobehjulius).
 - **[Ninjagame](java/Ninjagame)**: A turn-based combat game designed to implement Test-Driven Development (TDD) using JUnit 4/5. The game follows a structured testing approach to ensure combat logic, enemy AI, and player interactions work as expected.
-
-### 🗃️ SQL Projects (Located in sql/)
-- Currently, there are no published projects in this section, but stay tuned! I'm actively working on exciting projects, and they will be added here soon. 😊
 
 ---
 
