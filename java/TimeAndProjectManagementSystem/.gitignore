@@ -1,0 +1,114 @@
+# === IDEs ===
+
+# IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VS Code
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+.loadpath
+
+# === Personal/Sensitive Files ===
+.env
+.env.*
+*.local
+*.secret
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+*.pfx
+
+# SSH and credentials
+.ssh/
+*.pub
+*.gpg
+*.asc
+*.token
+*.keystore
+
+# === Node/Python/Rust/Java/... (general dev environments) ===
+node_modules/
+dist/
+build/
+target/
+out/
+bin/
+obj/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+coverage/
+*.log
+
+# === OS Files ===
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.cache/
+.Trash-*/
+
+# === Archives/Backups/Temporary Files ===
+*.bak
+*.tmp
+*.swp
+*.swo
+*.old
+*.orig
+*.rej
+
+# === Git backup ===
+# *.orig
+*.patch
+
+# === Others ===
+# *.log
+*.lock
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+*.gz
+# *.tmp
+*.tmp.*
+
+# === Custom personal folders ===
+logs/
+tmp/
+backup/
+local/
+
+# === Git hooks (local only) ===
+.git/hooks/
+
+# === Ignore local json
+data/activities.json
+data/coworker.json
+data/projects.json
+
+#
+data/*
