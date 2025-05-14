@@ -13,9 +13,7 @@ Welcome to my **Programming Portfolio**! This repository is a collection of proj
   - [C#](#-c-projects-located-in-cs)
   - [C++](#-c-projects-located-in-cpp)
   - [JavaScript/TypeScript](#-javascripttypescript-projects-located-in-js)
-  - [HTML/CSS](#-htmlcss-projects-located-in-htmlcss)
   - [Java](#-java-projects-located-in-java)
-  - [SQL](#%EF%B8%8F-sql-projects-located-in-sql)
 - [How to Use This Repository](#%EF%B8%8F-how-to-use-this-repository)
 - [Contact Me](#-contact-me)
 
@@ -58,6 +56,7 @@ public/
 ├── Java 
 │   ├── breakout
 │   ├── Ninjagame
+│   ├── Time and Project Management System   
 ```
 
 ---
@@ -76,11 +75,12 @@ Here are some of the programming languages, tools, and frameworks I've used acro
 - **SQL**
 
 ### Tools & Frameworks
+- **PyTorch, Numpy, Sympy** (Python)
 - **Unity, .net-frameworks (Xamerin, MAUI, ASP, ect.)** (C#)
 - **Unreal Engine** (C++)
-- **React, React-Native, vue, nest** (JavaScript/TypeScript)
 - **Node.js** (JavaScript)
-- **PyTorch, Numpy, Sympy** (Python)
+- **React & React-Native, Vue, Nest** (JavaScript/TypeScript)
+- **JavaFX, JUnit, Lombok, Cucumber** (Java)
 - **GitHub, GitLab** (Git)
 
 ### Other Technologies
@@ -111,6 +111,7 @@ Below is an overview of some of the projects in this repository. For a complete 
 ### ☕ Java Projects (Located in java/)
 - **[Breakout](java/Breakout)**: A classic brick-breaking game developed in Java as a 3-week university project. It features paddle and ball mechanics, multiple levels, power-ups, and collision handling, with a focus on object-oriented design and game physics. Developed in collaboration with [Bondesgaard](https://github.com/bondegaard), [Skytiger1](https://github.com/skytiger1) & [Lobehjulius](https://github.com/Lobehjulius).
 - **[Ninjagame](java/Ninjagame)**: A turn-based combat game designed to implement Test-Driven Development (TDD) using JUnit 4/5. The game follows a structured testing approach to ensure combat logic, enemy AI, and player interactions work as expected.
+- **[Time and Project Management System](java/TimeAndProjectManagementSystem)**: An application developed with TDD/BDD in as main focus. With a few White-Box test. Developed as a part of an Exam project in Software Engineering. The aaplication allows you to create: Projects, Activities and Coworkers. Where the activities can be assigned to a coworker and a project. And the coworkers can easily register their worked time.
 
 ---
 
