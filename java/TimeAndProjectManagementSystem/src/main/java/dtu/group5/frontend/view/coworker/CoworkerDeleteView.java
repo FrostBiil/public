@@ -9,7 +9,6 @@ import dtu.group5.frontend.view.IDeleteView;
 
 import java.util.Optional;
 
-// Made By Elias(s241121)
 public class CoworkerDeleteView implements IDeleteView {
 
     private final Controller<Coworker> controller;
@@ -21,14 +20,12 @@ public class CoworkerDeleteView implements IDeleteView {
         this.controller = controller;
     }
 
-    // Made By Elias(s241121)
     @Override
     public void runView() {
         delete();
     }
 
 
-    // Made By Elias(s241121)
     @Override
     public void delete() {
         printer.printHeader("DELETE COWORKER");

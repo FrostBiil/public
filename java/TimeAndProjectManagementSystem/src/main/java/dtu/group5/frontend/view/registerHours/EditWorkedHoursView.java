@@ -10,18 +10,15 @@ import dtu.group5.frontend.view.IView;
 import java.util.Date;
 import java.util.Optional;
 
-// Made By Matthias (s245759)
 public class EditWorkedHoursView implements IView {
   private final WorkedHoursController workedHoursController;
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
   private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-  // Made By Matthias (s245759)
   public EditWorkedHoursView(WorkedHoursController workedHoursController) {
     this.workedHoursController = workedHoursController;
   }
 
-  // Made By Matthias (s245759)
   @Override
   public void runView() {
     printer.printHeader("EDIT WORKED HOURS");

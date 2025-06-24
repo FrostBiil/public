@@ -8,7 +8,6 @@ import dtu.group5.frontend.view.ICreateView;
 
 import java.util.Optional;
 
-// Made by Matthias(s245759)
 public class CoworkerCreateView implements ICreateView<Coworker> {
   private final Controller<Coworker> controller;
 
@@ -19,13 +18,11 @@ public class CoworkerCreateView implements ICreateView<Coworker> {
     this.controller = controller;
   }
 
-  // Made By Matthias(s245759)
   @Override
   public void runView() {
     create();
   }
 
-  // Made By Matthias(s245759)
   @Override
   public Coworker create() {
     printer.printHeader("CREATE COWORKER");

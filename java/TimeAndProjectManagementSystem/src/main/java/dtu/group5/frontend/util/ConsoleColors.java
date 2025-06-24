@@ -1,6 +1,5 @@
 package dtu.group5.frontend.util;
 
-// Made by Matthias (s245759)
 public class ConsoleColors {
   public static final String RESET = "\u001B[0m";
 

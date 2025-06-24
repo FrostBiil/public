@@ -9,14 +9,12 @@ import java.util.Optional;
 
 import static dtu.group5.frontend.session.Session.login;
 
-// Made by Matthias (s245759)
 public class SessionLoginView implements IView {
   Session session = Session.getInstance();
 
   ConsolePrinter printer = ConsolePrinter.getInstance();
   ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-  // Made by Matthias (s245759)
   @Override
   public void runView() {
     printer.printHeader("LOGIN");

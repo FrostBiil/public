@@ -14,7 +14,6 @@ import dtu.group5.frontend.view.IView;
 
 import java.util.List;
 
-// Made By Matthias(s245759)
 public class ActivityMenuView implements IView {
   private final Controller<BaseActivity> controller;
 
@@ -29,7 +28,6 @@ public class ActivityMenuView implements IView {
   private final IListView<BaseActivity> activityMemberListView;
   private final IDeleteView deleteView;
 
-  //Made By Elias(241121)
   public ActivityMenuView(Controller<BaseActivity> controller, ICreateView<BaseActivity> createView, IView listMenuView, IEditView<BaseActivity> editView, IEditView<BaseActivity> assignMemberView, IListView<BaseActivity> activityMemberListView, IDeleteView deleteView) {
     this.controller = controller;
     this.createView = createView;
@@ -40,7 +38,6 @@ public class ActivityMenuView implements IView {
     this.deleteView = deleteView;
   }
 
-  // Made by Elias(241121)
   @Override
   public void runView() {
     List<MenuOption> options = List.of(

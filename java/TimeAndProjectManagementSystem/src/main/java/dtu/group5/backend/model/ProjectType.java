@@ -1,11 +1,9 @@
 package dtu.group5.backend.model;
 
-// Made by Elias (241121)
 public enum ProjectType {
 
     CLIENT, INTERN;
 
-    // Made by Elias (241121)
     public static ProjectType fromString(String type) {
         if (type == null) return null;
         return switch (type.toUpperCase()) {
@@ -15,7 +13,6 @@ public enum ProjectType {
         };
     }
 
-    // Made by Elias (241121)
     public String getFormattedName() {
         return switch (this) {
             case CLIENT -> "Client";

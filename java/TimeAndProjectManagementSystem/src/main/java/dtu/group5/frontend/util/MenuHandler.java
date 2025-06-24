@@ -2,12 +2,10 @@ package dtu.group5.frontend.util;
 
 import java.util.List;
 
-// Made by Matthias (s245759)
 public class MenuHandler {
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
   private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-  // Made by Matthias (s245759)
   public void runMenu(String title, List<MenuOption> options) {
     while (true) {
       printer.printHeader(title);

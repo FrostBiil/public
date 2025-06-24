@@ -6,7 +6,6 @@ import dtu.group5.backend.service.activity.edit_activity.ActivityFieldEditor;
 
 import java.util.Optional;
 
-// Made by Elias (241121)
 public class EndWeekEditor implements ActivityFieldEditor {
     @Override
     public boolean supports(String fieldName) {

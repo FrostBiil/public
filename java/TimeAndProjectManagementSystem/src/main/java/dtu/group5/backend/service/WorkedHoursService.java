@@ -23,7 +23,6 @@ import static dtu.group5.backend.util.DateUtil.formatDate;
 import static dtu.group5.backend.util.DateUtil.getCurrentDate;
 import static dtu.group5.backend.util.DateUtil.stripTime;
 
-// Made by Mattias (s245759)
 public class WorkedHoursService {
   private final IRepository<String, BaseActivity> activityRepository = ActivityRepository.getInstance();
   private final IRepository<Integer, Project> projectRepository = ProjectRepository.getInstance();
@@ -34,7 +33,6 @@ public class WorkedHoursService {
     new SetWorkedHoursEditor()
   );
 
-  // Made by Mattias (s245759)
   public List<ProjectActivity> listUnregisteredActivitiesToday(String initials) {
     Date today = stripTime(new Date());
 
@@ -52,7 +50,6 @@ public class WorkedHoursService {
       ).orElse(List.of());
   }
 
-  // Made by Mattias (s245759)
   public Optional<String> registerWorkedHours(int projectNumber, String activityTitle, double hours) {
     Coworker coworker = Session.getInstance().getLoggedInUser();
     if (coworker == null) return Optional.of("Coworker not logged in");
@@ -98,7 +95,6 @@ public class WorkedHoursService {
     return Optional.empty();
   }
 
-  // Made by Mattias (s245759)
   public Optional<String> deleteWorkedHours(int projectNumber, String activityTitle, Date date) {
     Coworker coworker = Session.getInstance().getLoggedInUser();
     if (coworker == null) return Optional.of("Coworker not logged in");
@@ -135,7 +131,6 @@ public class WorkedHoursService {
     return Optional.empty();
   }
 
-  // Made by Mattias (s245759)
   public List<String[]> getWorkedHoursByCoworker(String initials, Date date) {
     Coworker coworker = coworkerRepositiory.get(initials).orElse(null);
     if (coworker == null) return List.of();
@@ -159,7 +154,6 @@ public class WorkedHoursService {
     return rows;
   }
 
-  // Made by Mattias (s245759)
   public Optional<String> editWorkedHours(int projectNumber, String activityTitle, String initials, String fieldName, double hours, Date date) {
     if (date == null) date = getCurrentDate();
     if (hours < 0) return Optional.of("Worked hours must be positive");

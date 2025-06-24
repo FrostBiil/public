@@ -4,7 +4,6 @@ import dtu.group5.backend.model.BaseActivity;
 
 import java.util.Optional;
 
-// Made by Elias (241121)
 public class DescriptionEditor implements ActivityFieldEditor {
   @Override
   public boolean supports(String fieldName) {

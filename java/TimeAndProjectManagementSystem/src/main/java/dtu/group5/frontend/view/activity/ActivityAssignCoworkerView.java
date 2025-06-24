@@ -13,7 +13,6 @@ import dtu.group5.frontend.view.IEditView;
 
 import java.util.Optional;
 
-// Made by Elias (241121)
 public class ActivityAssignCoworkerView implements IEditView<BaseActivity> {
     private final ActivityController activityController;
     private final CoworkerController coworkerController;
@@ -22,20 +21,17 @@ public class ActivityAssignCoworkerView implements IEditView<BaseActivity> {
     private final ConsolePrinter printer = ConsolePrinter.getInstance();
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-    // Made by Elias (241121)
     public ActivityAssignCoworkerView(ActivityController activityController, CoworkerController coworkerController, AssignmentController assignmentController) {
         this.activityController = activityController;
         this.coworkerController = coworkerController;
       this.assignmentController = assignmentController;
     }
 
-    // Made by Elias (241121)
     @Override
     public void runView() {
         edit();
     }
 
-    // Made by Elias (241121)
     @Override
     public BaseActivity edit() {
         printer.printHeader("ADD ACTIVITY MEMBER");

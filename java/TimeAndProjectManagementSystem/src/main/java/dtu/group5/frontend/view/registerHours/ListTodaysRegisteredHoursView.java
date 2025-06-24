@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-// Made By Matthias (s245759)
 public class ListTodaysRegisteredHoursView implements IView {
   private final WorkedHoursController workedHoursController;
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
@@ -19,7 +18,7 @@ public class ListTodaysRegisteredHoursView implements IView {
   public ListTodaysRegisteredHoursView(WorkedHoursController workedHoursController) {
     this.workedHoursController = workedHoursController;
   }
-  // Made By Matthias (s245759)
+
   @Override
   public void runView() {
     printer.printHeader("LIST REGISTERED WORKED HOURS BY DATE");

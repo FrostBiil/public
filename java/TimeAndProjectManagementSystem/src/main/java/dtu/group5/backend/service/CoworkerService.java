@@ -25,7 +25,6 @@ import static dtu.group5.backend.util.DateUtil.formatDate;
 import static dtu.group5.backend.util.DateUtil.stripTime;
 import static dtu.group5.backend.util.FieldParser.parseField;
 
-// Made by Elias (241121)
 public class CoworkerService {
   private final IRepository<String, Coworker> coworkerRepository = CoworkerRepository.getInstance();
   private final IRepository<String, BaseActivity> activityRepository = ActivityRepository.getInstance();
@@ -35,7 +34,6 @@ public class CoworkerService {
           new NameEditor()
   );
 
-  // Made by Elias (241121)
   public Optional<String> create(String initials, String name) {
     if (initials == null || initials.isBlank()) return Optional.of("Initials cannot be empty");
     if (initials.length() > 4) return Optional.of("Initials must be at most 4 characters");
@@ -46,24 +44,20 @@ public class CoworkerService {
     return Optional.empty(); // success
   }
 
-  // Made by Elias (241121)
   public Optional<String> create(Coworker coworker) {
     if (coworker == null) return Optional.empty();
     // Validate coworker properties
     return create(coworker.getInitials(), coworker.getName());
   }
 
-  // Made by Julius (s245723)
   public Optional<Coworker> get(String initials) {
     return coworkerRepository.get(initials);
   }
 
-  // Made by Julius (s245723)
   public List<Coworker> getList() {
     return coworkerRepository.getList();
   }
 
-  // Made by Elias (241121)
   public Optional<String> editCoworker(Coworker coworker, Map<String, Object> fieldsToChange) {
 
     if (coworker == null) return Optional.of("Coworker not found");
@@ -98,7 +92,6 @@ public class CoworkerService {
     return Optional.empty();
   }
 
-  // Made by Jacob (s246077)
   public Optional<String> removeCoworker(Coworker coworker) {
     if (coworker == null) return Optional.of("Coworker cannot be null");
     if (!coworkerRepository.contains(coworker.getInitials())) return Optional.of("Coworker not found");
@@ -119,14 +112,12 @@ public class CoworkerService {
     return Optional.empty();
   }
 
-  // Made by Elias (241121)
   public Set<BaseActivity> getCoworkerActivities(Coworker coworker) {
     if (coworker == null) return Set.of();
 
     return this.activityRepository.getList().stream().filter(a ->a.isCoworkerAssigned(coworker)).collect(Collectors.toSet());
   }
 
-  // Made by Mattias (s245759)
   public List<String[]> getRegisteredTimeEntries(String initials) {
     Optional<Coworker> coworkerOpt = coworkerRepository.get(initials);
     if (coworkerOpt.isEmpty()) return Collections.emptyList();
@@ -158,7 +149,6 @@ public class CoworkerService {
     return result;
   }
 
-  // Made by Jacob(s246077)
   public List<String[]> getRegisteredTimeEntriesToday(String initials) {
     Optional<Coworker> coworkerOpt = coworkerRepository.get(initials);
     if (coworkerOpt.isEmpty()) return Collections.emptyList();

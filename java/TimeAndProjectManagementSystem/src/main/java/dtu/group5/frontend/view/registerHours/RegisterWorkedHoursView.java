@@ -8,7 +8,6 @@ import dtu.group5.frontend.view.IView;
 
 import java.util.Optional;
 
-  // Made By Matthias (s245759)
 public class RegisterWorkedHoursView implements IView {
   private final WorkedHoursController workedHoursController;
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
@@ -18,7 +17,6 @@ public class RegisterWorkedHoursView implements IView {
     this.workedHoursController = workedHoursController;
   }
 
-  // Made By Matthias (s245759)
   @Override
   public void runView() {
     printer.printHeader("REGISTER WORKED HOURS");

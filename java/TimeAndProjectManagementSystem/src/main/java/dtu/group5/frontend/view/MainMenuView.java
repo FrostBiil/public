@@ -7,7 +7,6 @@ import dtu.group5.frontend.util.MenuOption;
 
 import java.util.List;
 
- // Made by Matthias (s245759)
 public class MainMenuView implements IView {
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
   private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
@@ -19,7 +18,6 @@ public class MainMenuView implements IView {
   private final IView sessionMenuView;
   private final IView registerHoursMenuView;
 
-  //Made By Matthias (s245759)
   public MainMenuView(IView projectMenuView, IView activityMenuView, IView coworkerMenuView, IView sessionMenuView, IView registerHoursMenuView) {
     this.projectMenuView = projectMenuView;
     this.activityMenuView = activityMenuView;
@@ -28,7 +26,6 @@ public class MainMenuView implements IView {
     this.registerHoursMenuView = registerHoursMenuView;
   }
 
-  // Made by Matthias (s245759)
   @Override
   public void runView() {
     List<MenuOption> options = List.of(

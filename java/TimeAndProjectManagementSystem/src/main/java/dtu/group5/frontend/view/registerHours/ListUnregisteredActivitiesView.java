@@ -9,7 +9,6 @@ import dtu.group5.frontend.view.IView;
 import java.util.ArrayList;
 import java.util.List;
 
-// Made By Matthias (s245759)
 public class ListUnregisteredActivitiesView implements IView {
   private final WorkedHoursController workedHoursController;
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
@@ -19,7 +18,6 @@ public class ListUnregisteredActivitiesView implements IView {
     this.workedHoursController = workedHoursController;
   }
 
-  // Made By Matthias (s245759)
   @Override
   public void runView() {
     printer.printHeader("UNREGISTERED ACTIVITIES FOR TODAY");

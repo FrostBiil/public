@@ -19,19 +19,16 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-// Made by Elias (s241121)
 public class ProjectAdapter implements JsonSerializer<Project>, JsonDeserializer<Project> {
 
     private final Set<Coworker> loadedCoworkers;
     private final Set<BaseActivity> loadedActivities;
 
-    // Made by Elias (s241121)
     public ProjectAdapter(Set<Coworker> loadedCoworkers, Set<BaseActivity> loadedActivities) {
         this.loadedCoworkers = loadedCoworkers;
         this.loadedActivities = loadedActivities;
     }
 
-    // Made by Elias (s241121)
     @Override
     public JsonElement serialize(Project project, Type type, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
@@ -59,7 +56,6 @@ public class ProjectAdapter implements JsonSerializer<Project>, JsonDeserializer
         return jsonObject;
     }
 
-    // Made by Elias (s241121)
     @Override
     public Project deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
         JsonObject jsonObject = json.getAsJsonObject();

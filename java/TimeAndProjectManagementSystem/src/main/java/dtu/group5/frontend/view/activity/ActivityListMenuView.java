@@ -9,20 +9,17 @@ import dtu.group5.frontend.view.IView;
 
 import java.util.List;
 
-// Made By Elias (s241121)
 public class ActivityListMenuView implements IView {
     private final MenuHandler menuHandler = new MenuHandler();
 
     private final IListView<FixedActivity> fixedActvityIListView;
     private final IListView<ProjectActivity> projectActivityIListView;
 
-    // Made By Elias (s241121)
     public ActivityListMenuView(IListView<FixedActivity> fixedActvityIListView, IListView<ProjectActivity> projectActivityIListView) {
         this.fixedActvityIListView = fixedActvityIListView;
         this.projectActivityIListView = projectActivityIListView;
     }
 
-    // Made By Elias (s241121)
     @Override
     public void runView() {
         List<MenuOption> options = List.of(

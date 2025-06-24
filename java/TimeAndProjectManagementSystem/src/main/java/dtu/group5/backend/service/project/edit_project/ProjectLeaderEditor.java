@@ -5,7 +5,6 @@ import dtu.group5.backend.model.Project;
 
 import java.util.Optional;
 
-// Made by Elias (s241121)
 public class ProjectLeaderEditor implements ProjectFieldEditor {
     @Override
     public boolean supports(String fieldName) {

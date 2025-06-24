@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-// Made by Mattias (s245759)
 public class SetWorkedHoursEditor implements WorkedHoursEditor {
 
     @Override

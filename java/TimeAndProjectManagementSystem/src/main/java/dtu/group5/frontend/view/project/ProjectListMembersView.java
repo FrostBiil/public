@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-// Made By Elias(241121)
 public class ProjectListMembersView implements IListView<Project> {
     private final Controller<Project> controller;
 
@@ -19,12 +18,10 @@ public class ProjectListMembersView implements IListView<Project> {
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
 
-    // Made By Elias(241121)
     public ProjectListMembersView(Controller<Project> controller) {
         this.controller = controller;
     }
 
-    // Made By Elias(241121)
     @Override
     public void runView() {
         printer.printHeader("PROJECT MEMBER LIST");
@@ -66,7 +63,6 @@ public class ProjectListMembersView implements IListView<Project> {
         input.waitForEnter();
     }
 
-    // Made By Elias(241121)
     @Override
     public List<Project> getList() {
         return controller.getList();

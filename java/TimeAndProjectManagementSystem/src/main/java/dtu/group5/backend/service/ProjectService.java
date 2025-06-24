@@ -39,7 +39,6 @@ import java.util.stream.Collectors;
 import static dtu.group5.backend.service.AssignmentService.isCoworkerAssigned;
 import static dtu.group5.backend.util.FieldParser.parseField;
 
-// Made by Matthias (s245759)
 public class ProjectService {
   private final IRepository<String, BaseActivity> activityRepository = ActivityRepository.getInstance();
   private final IRepository<Integer, Project> projectRepository = ProjectRepository.getInstance();
@@ -68,7 +67,6 @@ public class ProjectService {
     new StartBeforeEndValidator()
   );
 
-  // Made by Matthias (s245759)
   public Optional<String> create(Map<String, Object> inputFields) {
     int number = getNextProjectNumber();
     Project project = new Project(number, null);
@@ -103,17 +101,14 @@ public class ProjectService {
     return Optional.empty();
   }
 
-  // Made by August (s241541)
   public Optional<Project> get(int projectNumber) {
     return projectRepository.get(projectNumber);
   }
 
-  // Made by August (s241541)
   public List<Project> getList() {
     return projectRepository.getList();
   }
 
-  // Made by Elias (241121)
   public Optional<String> editProject(Project project, Map<String, Object> fieldsToChange) {
     Coworker requester = Session.getInstance().getLoggedInUser();
 
@@ -148,12 +143,10 @@ public class ProjectService {
     return Optional.empty();
   }
 
-  // Made by Jacob(s246077)
   public List<ProjectFieldCreator> getCreators() {
     return creators;
   }
 
-  // Made by Elias (s241121)
   public Optional<String> removeCoworkerFromProject(Project project, Coworker coworker) {
       if (project == null) return Optional.of("Project cannot be null");
       if (coworker == null) return Optional.of("Coworker cannot be null");
@@ -168,7 +161,6 @@ public class ProjectService {
       return Optional.empty();
   }
 
-  // Made by Elias (s241121)
   public List<String[]> generateWorkloadReport(Project project) {
     Coworker requester = Session.getInstance().getLoggedInUser();
     if (requester == null) throw new IllegalStateException("Please login");
@@ -220,7 +212,6 @@ public class ProjectService {
     return report;
   }
 
-  // Made by Elias (s241121)
   public Set<ProjectActivity> getProjectActivities(Project project) {
     if (project == null) return Set.of();
     return this.activityRepository.getList().stream()
@@ -229,7 +220,6 @@ public class ProjectService {
             .filter(a -> a.getProjectNumber() == project.getProjectNumber()).collect(Collectors.toSet());
   }
 
-  // Made by Julius(s245723)
   public Optional<String> removeProject(Project project) {
     if (project == null) return Optional.of("Project cannot be null");
 
@@ -247,7 +237,6 @@ public class ProjectService {
     return Optional.empty();
   }
 
-  // Made by Julius (245723)
   private int getNextProjectNumber() {
     int currentYear = Calendar.getInstance().get(Calendar.YEAR) % 100;
 

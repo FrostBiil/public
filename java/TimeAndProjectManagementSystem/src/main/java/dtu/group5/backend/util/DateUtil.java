@@ -4,7 +4,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-// Made by Mattias (s245759)
 public class DateUtil {
   public static Date parseDate(String dateString) throws IllegalArgumentException {
     try {
@@ -18,12 +17,10 @@ public class DateUtil {
     }
   }
 
-  // Made by Mattias (s245759)
   public static String formatDate(Date date) {
     return new SimpleDateFormat("dd-MM-yyyy").format(date);
   }
 
-  // Made by Mattias (s245759)
   public static Date stripTime(Date date) {
     Calendar cal = Calendar.getInstance();
     cal.setTime(date);
@@ -34,7 +31,6 @@ public class DateUtil {
     return cal.getTime();
   }
 
-  // Made by Mattias (s245759)
   public static Date getCurrentDate() {
     Date date = new Date();
     return stripTime(date);

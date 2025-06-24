@@ -4,7 +4,6 @@ import dtu.group5.backend.model.Coworker;
 
 import java.util.Optional;
 
-// Made by Elias (241121)
 public class NameEditor implements CoworkerFieldEditor {
     @Override
     public boolean supports(String fieldName) {

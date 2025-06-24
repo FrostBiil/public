@@ -16,7 +16,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-// Made by Elias (241121)
 public class ActivityCreateView implements ICreateView<BaseActivity> {
   private final ActivityController activityController;
   private final CoworkerController coworkerController;
@@ -24,19 +23,16 @@ public class ActivityCreateView implements ICreateView<BaseActivity> {
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
   private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-  // Made by Elias (241121)
   public ActivityCreateView(ActivityController activityController, CoworkerController coworkerController) {
     this.activityController = activityController;
     this.coworkerController = coworkerController;
   }
 
-  // Made by Elias (241121)
   @Override
   public void runView() {
     create();
   }
 
-  // Made by Elias (241121)
   @Override
   public BaseActivity create() {
     printer.printHeader("CREATE ACTIVITY");

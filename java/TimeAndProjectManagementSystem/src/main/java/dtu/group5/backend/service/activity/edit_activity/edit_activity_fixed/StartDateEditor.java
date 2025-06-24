@@ -7,7 +7,6 @@ import dtu.group5.backend.service.activity.edit_activity.ActivityFieldEditor;
 import java.util.Date;
 import java.util.Optional;
 
-// Made by Mattias (s245759)
 public class StartDateEditor implements ActivityFieldEditor {
     @Override
     public boolean supports(String fieldName) {

@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-// Made By Mattias (s245759)
 public class ProjectListView implements IListView<Project> {
   private final ProjectController controller;
 
@@ -23,7 +22,6 @@ public class ProjectListView implements IListView<Project> {
     this.controller = controller;
   }
 
-  // Made By Mattias (s245759)
   @Override
   public void runView() {
     printer.printHeader("PROJECT LIST");
@@ -54,7 +52,6 @@ public class ProjectListView implements IListView<Project> {
     printer.printTable(tableRows);
     input.waitForEnter();
   }
-  // Made by Elias(241121)
   @Override
   public List<Project> getList() {
     return controller.getList();

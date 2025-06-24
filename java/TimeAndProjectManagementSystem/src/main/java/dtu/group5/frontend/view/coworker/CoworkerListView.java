@@ -9,7 +9,6 @@ import dtu.group5.frontend.view.IListView;
 import java.util.ArrayList;
 import java.util.List;
 
-// Made By Elias(s241121)
 public class CoworkerListView implements IListView<Coworker> {
   private final Controller<Coworker> controller;
 
@@ -20,7 +19,6 @@ public class CoworkerListView implements IListView<Coworker> {
     this.controller = controller;
   }
 
-  // Made By  Elias(s241121)
   @Override
   public void runView() {
     printer.printHeader("COWORKER LIST");
@@ -46,7 +44,6 @@ public class CoworkerListView implements IListView<Coworker> {
     input.waitForEnter();
   }
 
-  // Made By Matthias(s245759)
   @Override
   public List<Coworker> getList() {
     return controller.getList();

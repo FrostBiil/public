@@ -9,7 +9,7 @@ generator client {
 }
 
 datasource db {
-  provider          = "postgresql"
+  provider          = "sqlite"
   url               = env("DB_CONNECTION")
   shadowDatabaseUrl = env("DB_CONNECTION")
 }
@@ -71,7 +71,7 @@ model GameOwner {
   gameId String
   userId String
 
-  date DateTime @default(now()) 
+  date DateTime @default(now())
 
   @@unique([gameId, userId])
 }

@@ -14,25 +14,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-// Made By Elias (s241121)
 public class ActivityEditView implements IEditView<BaseActivity> {
   private final Controller<BaseActivity> activityController;
 
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
   private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-  // Made By Elias (s241121)
   public ActivityEditView(Controller<BaseActivity> activityController) {
     this.activityController = activityController;
   }
 
-  // Made By Elias (s241121)
   @Override
   public void runView() {
     edit();
   }
 
-  // Made By Elias (s241121)
   @Override
   public BaseActivity edit() {
     printer.printHeader("EDIT ACTIVITY");

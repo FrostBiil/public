@@ -2,22 +2,18 @@ package dtu.group5.frontend.util;
 
 import java.util.List;
 
-// Made by Matthias (s245759)
 public class ConsolePrinter {
   private static final ConsolePrinter instance = new ConsolePrinter();
   private final ConsoleFormatter formatter = new ConsoleFormatter();
 
-  // Made by Matthias (s245759)
   private ConsolePrinter() {;
     // Private constructor to prevent instantiation
   }
 
-  // Made by Matthias (s245759)
   public static ConsolePrinter getInstance() {
     return instance;
   }
 
-  // Made by Matthias (s245759)
   public void printHeader(String title) {
     String line = formatter.repeat('=', title.length() + 8);
     System.out.println();
@@ -26,48 +22,39 @@ public class ConsolePrinter {
     System.out.println(line + ConsoleColors.RESET);
   }
 
-  // Made by Matthias (s245759)
   public void printSubHeader(String label) {
     System.out.println();
     System.out.println(ConsoleColors.CYAN + "-- " + label + ConsoleColors.RESET);
   }
 
-  // Made by Matthias (s245759)
   public void printLine() {
     System.out.println(formatter.repeat('-', 30));
   }
 
-  // Made by Matthias (s245759)
   public void printBlankLine() {
     System.out.println();
   }
 
-  // Made by Matthias (s245759)
   public void printError(String message) {
     System.out.println(ConsoleColors.RED + "[ERROR] " + message + ConsoleColors.RESET);
   }
 
-  // Made by Matthias (s245759)
   public void printInfo(String message) {
     System.out.println(ConsoleColors.YELLOW + "[INFO] " + message + ConsoleColors.RESET);
   }
 
-  // Made by Matthias (s245759)
   public void printSuccess(String message) {
     System.out.println(ConsoleColors.GREEN + "[SUCCESS] " + message + ConsoleColors.RESET);
   }
 
-  // Made by Matthias (s245759)
   public void printOption(int number, String description) {
     System.out.printf("[%d] %s%n", number, description);
   }
 
-  // Made by Matthias (s245759)
   public void printKeyValue(String key, String value) {
     System.out.printf("%-15s: %s%n", key, value);
   }
 
-  // Made by Elias (241121)
   public void printTable(List<String[]> rows) {
 
     // Dont print empty table
@@ -119,7 +106,6 @@ public class ConsolePrinter {
     System.out.println(separator);
   }
 
-  // Made by Elias (s241121)
   public void printList(List<String> list) {
     for (String item : list) {
       System.out.println("- " + item);

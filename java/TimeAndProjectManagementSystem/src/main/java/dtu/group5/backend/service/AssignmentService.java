@@ -14,18 +14,15 @@ import java.util.Optional;
 
 import static dtu.group5.backend.util.DateUtil.convertToDate;
 
-// Made by Mattias (s245759)
 public class AssignmentService {
   private final IRepository<String, BaseActivity> activityRepository = ActivityRepository.getInstance();
   private final IRepository<Integer, Project> projectRepository = ProjectRepository.getInstance();
   private final CoworkerService coworkerService;
 
-  // Made by Mattias (s245759)
   public AssignmentService(CoworkerService coworkerService) {
     this.coworkerService = coworkerService;
   }
 
-  // Made by Mattias (s245759)
   public Optional<String> assignCoworkerToActivity(BaseActivity activity, Coworker coworker, boolean force) {
     if (activity == null || coworker == null)
       return Optional.of("Activity or coworker cannot be null");
@@ -64,7 +61,6 @@ public class AssignmentService {
     return Optional.empty();
   }
 
-  // Made by Elias (241121)
   public Optional<String> assignCoworkerToProject(Project project, Coworker coworker) {
     if (project == null) return Optional.of("Project cannot be null");
     if (coworker == null) return Optional.of("Coworker cannot be null");
@@ -74,12 +70,10 @@ public class AssignmentService {
     return Optional.empty();
   }
 
-    // Made by Mattias (s245759)
   public static boolean isCoworkerAssigned(Project project, Coworker coworker) {
     return project.getCoworkers().stream().anyMatch(c -> c.getInitials().equals(coworker.getInitials()));
   }
 
-  // Made by Elias (241121)
   public boolean doesCoworkerHaveActivityInTimespand(Coworker coworker, Date startDate, Date endDate) {
     // Check overlap for FixedActivity
     boolean found = activityRepository.getList().stream()

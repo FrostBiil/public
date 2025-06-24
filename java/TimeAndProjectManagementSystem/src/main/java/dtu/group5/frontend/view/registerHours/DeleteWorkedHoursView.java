@@ -10,7 +10,6 @@ import dtu.group5.frontend.view.IView;
 import java.util.Date;
 import java.util.Optional;
 
-// Made By Matthias (s245759)
 public class DeleteWorkedHoursView implements IView {
   private final WorkedHoursController workedHoursController;
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
@@ -20,7 +19,6 @@ public class DeleteWorkedHoursView implements IView {
     this.workedHoursController = workedHoursController;
   }
 
-  // Made By Matthias (s245759)
   @Override
   public void runView() {
     printer.printHeader("DELETE WORKED HOURS");

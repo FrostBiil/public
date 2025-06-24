@@ -5,7 +5,6 @@ import dtu.group5.backend.model.Project;
 import java.util.Date;
 import java.util.Optional;
 
-// Made by Mattias (s245759)
 public class StartDateCreator implements ProjectFieldCreator {
     @Override
     public boolean supports(String fieldName) {

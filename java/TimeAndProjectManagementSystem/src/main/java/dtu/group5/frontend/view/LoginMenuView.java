@@ -8,7 +8,6 @@ import dtu.group5.frontend.util.MenuOption;
 import dtu.group5.frontend.util.RedirectMenuHandler;
 
 import java.util.List;
-// Made by Elias (241121)
 public class LoginMenuView implements IView {
     private final ConsolePrinter printer = ConsolePrinter.getInstance();
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
@@ -18,7 +17,6 @@ public class LoginMenuView implements IView {
     private final IView loginView;
     private final ICreateView<Coworker> createView;
 
-    // Made by Elias (241121)
     public LoginMenuView(IView mainView, IView loginView, ICreateView<Coworker> createView) {
         this.mainView = mainView;
         this.loginView = loginView;
@@ -28,7 +26,6 @@ public class LoginMenuView implements IView {
     }
 
 
-    // Made by Elias (241121)
     @Override
     public void runView() {
         List<MenuOption> options = List.of(

@@ -9,7 +9,6 @@ import dtu.group5.frontend.view.IDeleteView;
 
 import java.util.Optional;
 
-// Made By Elias (s241121)
 public class ActivityDeleteView implements IDeleteView {
 
     private final Controller<BaseActivity> controller;
@@ -17,19 +16,16 @@ public class ActivityDeleteView implements IDeleteView {
     private final ConsolePrinter printer = ConsolePrinter.getInstance();
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-    // Made By Elias (s241121)
     public ActivityDeleteView(Controller<BaseActivity> controller) {
         this.controller = controller;
     }
 
-    // Made By Elias (s241121)
     @Override
     public void runView() {
         delete();
     }
 
 
-    // Made By Elias (s241121)
     @Override
     public void delete() {
         printer.printHeader("DELETE ACTIVITY");

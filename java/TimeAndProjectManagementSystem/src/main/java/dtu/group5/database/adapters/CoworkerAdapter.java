@@ -11,10 +11,7 @@ import dtu.group5.backend.model.Coworker;
 
 import java.lang.reflect.Type;
 
-// Made by Elias (s241121)
 public class CoworkerAdapter implements JsonSerializer<Coworker>, JsonDeserializer<Coworker> {
-
-    // Made by Elias (s241121)
     @Override
     public JsonElement serialize(Coworker coworker, Type type, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
@@ -26,7 +23,6 @@ public class CoworkerAdapter implements JsonSerializer<Coworker>, JsonDeserializ
         return jsonObject;
     }
 
-    // Made by Elias (s241121)
     @Override
     public Coworker deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
         JsonObject jsonObject = json.getAsJsonObject();

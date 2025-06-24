@@ -7,7 +7,6 @@ import java.util.Set;
 
 import static dtu.group5.backend.util.DateUtil.stripTime;
 
-// Made by Elias (241121)
 public class ProjectActivity extends BaseActivity {
   private final int projectNumber;
 
@@ -19,7 +18,6 @@ public class ProjectActivity extends BaseActivity {
 
   private final Map<Coworker, Map<Date, Double>> workedHours = new HashMap<>();
 
-  // Made by Elias (241121)
   public ProjectActivity(int projectNumber, String title, double expectedHours, boolean finished,
                          String description, Set<Coworker> coworkersToAssign,
                          int startYear, int startWeekNumber, int endYear, int endWeekNumber,
@@ -98,7 +96,6 @@ public class ProjectActivity extends BaseActivity {
     this.endWeekNumber = endWeekNumber;
   }
 
-  // Made by Matthias (245759)
   public void setWorkedHours(Coworker coworker, Date date, double hours) {
     Map<Date, Double> daily = workedHours.computeIfAbsent(coworker, k -> new HashMap<>());
     daily.put(stripTime(date), hours);

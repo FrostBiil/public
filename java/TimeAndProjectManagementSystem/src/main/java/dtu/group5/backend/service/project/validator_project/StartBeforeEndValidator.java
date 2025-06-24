@@ -5,7 +5,6 @@ import dtu.group5.backend.model.Project;
 import java.util.Date;
 import java.util.Optional;
 
-// Made by Matthias (s245759)
 public class StartBeforeEndValidator implements ProjectFieldValidator {
     @Override
     public Optional<String> validate(Project project) {

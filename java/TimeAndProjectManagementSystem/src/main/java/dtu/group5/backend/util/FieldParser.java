@@ -7,9 +7,7 @@ import java.util.Date;
 
 import static dtu.group5.backend.util.DateUtil.parseDate;
 
-// Made by Mattias (s245759)
 public class FieldParser {
-  // Made by Mattias (s245759)
   public static Object parseField(String field, Object value) {
     return switch (field.toLowerCase()) {
       case "startdate", "enddate" -> (value instanceof Date) ? value : parseDate(value.toString());
@@ -22,7 +20,6 @@ public class FieldParser {
     };
   }
 
-  // Made by Elias (s241121)
   public static Boolean parseBoolean(String value) {
     if (value.equalsIgnoreCase("true") || value.equalsIgnoreCase("yes") || value.equalsIgnoreCase("y") || value.equalsIgnoreCase("ja"))
       return true;

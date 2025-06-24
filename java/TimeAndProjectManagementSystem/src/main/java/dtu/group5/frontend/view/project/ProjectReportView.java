@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Optional;
 
 
-// Made By Elias (241121)
 public class ProjectReportView implements IReportView {
 
     private final ProjectController projectController;
@@ -26,13 +25,11 @@ public class ProjectReportView implements IReportView {
         this.projectController = projectController;
     }
 
-    // Made By Elias(241121)
     @Override
     public void runView() {
         this.showReport();
     }
 
-    // Made By Matthias (s245759)
     @Override
     public void showReport() {
         printer.printHeader("PROJECT WORK REPORT");

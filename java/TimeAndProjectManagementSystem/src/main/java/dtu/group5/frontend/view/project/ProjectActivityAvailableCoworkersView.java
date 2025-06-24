@@ -25,24 +25,22 @@ public class ProjectActivityAvailableCoworkersView implements IListView<Project>
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-    // Made By Elias(241121)
+    
     public ProjectActivityAvailableCoworkersView(ProjectController projectController, ActivityController activityController) {
         this.projectController = projectController;
         this.activityController = activityController;
     }
-    // Made By Elias(241121)
+    
     @Override
     public List<Project> getList() {
         return List.of();
     }
 
-    // Made By Elias(241121)
     @Override
     public void runView() {
         findAvailableCoworkers();
     }
 
-    // Made By Elias(241121)
     public void findAvailableCoworkers() {
         printer.printHeader("AVAILABLE COWORKERS");
 

@@ -31,7 +31,6 @@ import java.util.stream.Collectors;
 
 import static dtu.group5.backend.util.FieldParser.parseField;
 
-// Made by Matthias (s245759)
 public class ActivityService {
   private final IRepository<String, BaseActivity> activityRepository = ActivityRepository.getInstance();
   private final IRepository<Integer, Project> projectRepository = ProjectRepository.getInstance();
@@ -51,13 +50,11 @@ public class ActivityService {
       new ExpectedHoursEditor()
   );
 
-  // Made by Matthias (s245759)
   public ActivityService(AssignmentService assignmentService, CoworkerService coworkerService) {
     this.assignmentService = assignmentService;
     this.coworkerService = coworkerService;
   }
 
-  // Made by Elias (241121)
   public Optional<String> createProductActivity(int projectNumber, String title, double expectedHours, boolean finished, String description, Set<Coworker> assignedCoworkers, int startYear, int startWeekNumber, int endYear, int endWeekNumber, Map<Coworker, Map<Date, Double>> workedHoursPerCoworker) {
       if (title == null || title.isBlank()) return Optional.of("Activity title cannot be empty");
       if (activityRepository.contains(title)) return Optional.of("Activity already exists.");
@@ -94,7 +91,6 @@ public class ActivityService {
       return Optional.empty();
   }
 
-  // Made by Elias (241121)
   public Optional<String> createFixedActivity(String title, boolean finished, String description, Date startDate, Date endDate, Coworker assignedCoworker) {
 
     if (title == null || title.isBlank()) return Optional.of("Activity title cannot be empty");
@@ -112,17 +108,14 @@ public class ActivityService {
     return Optional.empty();
   }
 
-  // Made by Elias (241121)
   public Optional<String> createFixedActivity(FixedActivity fixedActvity) {
     return createFixedActivity(fixedActvity.getTitle(), fixedActvity.isFinished(), fixedActvity.getDescription(), fixedActvity.getStartDate(), fixedActvity.getEndDate(), fixedActvity.getAssignedCoworkers().stream().findFirst().orElse(null));
   }
 
-  // Made by Elias (241121)
   public Optional<String> create(ProjectActivity projectActivity) {
      return createProductActivity(projectActivity.getProjectNumber(), projectActivity.getTitle(), projectActivity.getExpectedHours(), projectActivity.isFinished(), projectActivity.getDescription(), projectActivity.getAssignedCoworkers(), projectActivity.getStartYear(), projectActivity.getStartWeekNumber(), projectActivity.getEndYear(), projectActivity.getEndWeekNumber(), projectActivity.getWorkedHoursPerCoworker());
   }
 
-  // Made by Elias (241121)
   public Optional<String> create(BaseActivity activity) {
     return switch (activity) {
       case null -> Optional.empty();
@@ -133,22 +126,18 @@ public class ActivityService {
 
   }
 
-  // Made by Julius (245723)
   public Optional<BaseActivity> get(String title) {
     return activityRepository.get(title);
   }
 
-  // Made by Julius (245723)
   public List<BaseActivity> getList() {
     return activityRepository.getList();
   }
 
-  // Made by Julius (245723)
   public boolean contains(String title) {
     return activityRepository.contains(title);
   }
 
-  // Made by Matthias (s245759)
   public Optional<String> editActivity(BaseActivity activity, Map<String, Object> fieldsToChange) {
       if (activity == null) return Optional.of("Activity cannot be null");
       if (fieldsToChange == null || fieldsToChange.isEmpty()) return Optional.of("No fields to change");
@@ -197,7 +186,6 @@ public class ActivityService {
       return Optional.empty();
   }
 
-  // Made by Auguest (s241541)
   public Optional<BaseActivity> findActivityByTitle(String activityTitle) {
     for (BaseActivity activity : activityRepository.getList()) {
       if (activity.getTitle().equals(activityTitle)) {
@@ -207,7 +195,6 @@ public class ActivityService {
     return Optional.empty();
   }
 
-  // Made by Jacob (s246077)
   public Optional<String> markAsFinished(BaseActivity activity) {
     if (activity == null) return Optional.of("Activity cannot be null");
     activity.setFinished(true);
@@ -215,14 +202,12 @@ public class ActivityService {
     return Optional.empty();
   }
 
-  // Made by Jacob (s246077)
   public Optional<String> removeActivity(BaseActivity activity) {
         if (activity == null) return Optional.of("Activity cannot be null");
         activityRepository.remove(activity.getTitle());
         return Optional.empty();
     }
 
-  // Made by August (s241541)
   public boolean isCoworkerAvailable(Coworker coworker, BaseActivity activity){
         if (activity == null) return false;
         if (activity.getAssignedCoworkers().contains(coworker)) return false;
@@ -246,7 +231,6 @@ public class ActivityService {
         return true;
     }
 
-  // Made by August (s241541)
   public List<Coworker> listAvailableCoworkers(ProjectActivity activity){
         return coworkerService.getList().stream()
                 .filter(coworker -> coworkerService.getCoworkerActivities(coworker).size() < coworker.getMaxActivities())

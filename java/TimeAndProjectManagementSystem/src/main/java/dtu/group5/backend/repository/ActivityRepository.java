@@ -6,16 +6,13 @@ import dtu.group5.database.DataManager;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-// Made by Mattias (s245759)
 public class ActivityRepository extends BaseRepository<String, BaseActivity> {
   private static ActivityRepository instance;
 
-  // Made by Mattias (s245759)
   private ActivityRepository() {
     super();
   }
 
-  // Made by Mattias (s245759)
   public static synchronized ActivityRepository getInstance() {
     if (instance == null) {
       instance = new ActivityRepository();
@@ -23,7 +20,6 @@ public class ActivityRepository extends BaseRepository<String, BaseActivity> {
     return instance;
   }
 
-  // Made by Mattias (s245759)
   // Related to the database and is not tested
   public static void initialize(List<BaseActivity> initialData) {
     getInstance().clear();
@@ -32,7 +28,6 @@ public class ActivityRepository extends BaseRepository<String, BaseActivity> {
     }
   }
 
-  // Made by Mattias (s245759)
   @Override
   public boolean add(BaseActivity activity) {
     String name = activity.getTitle();
@@ -44,7 +39,6 @@ public class ActivityRepository extends BaseRepository<String, BaseActivity> {
     return true;
   }
 
-  // Made by Elias (241121)
   // Related to the database and is not tested
   @Override
   public void save() {

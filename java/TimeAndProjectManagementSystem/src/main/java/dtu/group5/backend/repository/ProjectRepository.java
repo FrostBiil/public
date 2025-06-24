@@ -6,16 +6,13 @@ import dtu.group5.database.DataManager;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-// Made by Mattias (s245759)
 public class ProjectRepository extends BaseRepository<Integer, Project> {
   private static ProjectRepository instance;
 
-  // Made by Mattias (s245759)
   private ProjectRepository() {
     super();
   }
 
-  // Made by Mattias (s245759)
   public static synchronized ProjectRepository getInstance() {
     if (instance == null) {
       instance = new ProjectRepository();
@@ -23,7 +20,6 @@ public class ProjectRepository extends BaseRepository<Integer, Project> {
     return instance;
   }
 
-  // Made by Mattias (s245759)
   // Related to the database and is not tested
   public static synchronized void initialize(List<Project> initialData) {
     getInstance().repository.clear();
@@ -32,7 +28,6 @@ public class ProjectRepository extends BaseRepository<Integer, Project> {
     }
   }
 
-  // Made by Mattias (s245759)
   @Override
   public boolean add(Project project) {
     int number = project.getProjectNumber();
@@ -42,7 +37,6 @@ public class ProjectRepository extends BaseRepository<Integer, Project> {
     return true;
   }
 
-  // Made by Elias (241121)
   // Related to the database and is not tested
   @Override
   public void save() {

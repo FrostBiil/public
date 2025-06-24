@@ -13,7 +13,6 @@ import dtu.group5.frontend.view.IView;
 
 import java.util.List;
 
-//Made By Matthias(s245759)
 public class CoworkerMenuView implements IView {
   private final Controller<Coworker> controller;
 
@@ -26,7 +25,6 @@ public class CoworkerMenuView implements IView {
     private final IView editView;
     private final IDeleteView deleteView;
 
-  //Made By Matthias(s245759)
   public CoworkerMenuView(Controller<Coworker> controller, ICreateView<Coworker> createView, IListView<Coworker> listView, IView editView, IDeleteView deleteView) {
     this.controller = controller;
     this.createView = createView;
@@ -35,7 +33,6 @@ public class CoworkerMenuView implements IView {
     this.deleteView = deleteView;
   }
 
-  //Made By Matthias(s245759)
   @Override
   public void runView() {
     List<MenuOption> options = List.of(

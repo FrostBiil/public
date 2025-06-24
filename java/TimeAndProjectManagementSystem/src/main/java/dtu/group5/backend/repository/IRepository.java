@@ -6,7 +6,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-// Made by Mattias (s245759)
 public interface IRepository<K, T extends IModel> {
   Optional<T> get(K key);
   List<T> getList();

@@ -23,7 +23,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-// Made by Elias (s241121)
 public class DataManager {
     // Instance for DataManager
     private static DataManager instance;
@@ -46,7 +45,6 @@ public class DataManager {
     private final Set<Coworker> loadedCoworkers = new HashSet<>();
     private final Set<BaseActivity> loadedActivities = new HashSet<>();
 
-    // Made by Elias (s241121)
     public DataManager() {
         instance = this;
 
@@ -81,8 +79,6 @@ public class DataManager {
         this.projectActivitiesFile = files[3];
     }
 
-
-    // Made by Elias (s241121)
     /**
      * Get or create the data folder
      * @return The data folder
@@ -97,7 +93,6 @@ public class DataManager {
         return directory;
     }
 
-    // Made by Elias (s241121)
     /**
      * Get or create the data file
      * @param fileName The name of the data file
@@ -123,7 +118,6 @@ public class DataManager {
         return dataFile;
     }
 
-    // Made by Elias (s241121)
     /**
      * Load the coworkers from the json file
      * @return The list of coworkers
@@ -154,7 +148,6 @@ public class DataManager {
         return coworkers;
     }
 
-    // Made by Elias (s241121)
     /**
      * Load the projects from the json file
      * @return The list of projects
@@ -181,7 +174,6 @@ public class DataManager {
         return projects;
     }
 
-    // Made by Elias (s241121)
     /**
      * Load the activities from the json file
      * @return The list of activities
@@ -212,7 +204,6 @@ public class DataManager {
     }
 
 
-    // Made by Elias (s241121)
     /**
      * Load the activities from the json file
      * @return The list of activities
@@ -242,7 +233,6 @@ public class DataManager {
         return activities;
     }
 
-    // Made by Elias (s241121)
     /**
      * Save the coworkers to the json file
      * @param coworkers The list of coworkers
@@ -260,7 +250,6 @@ public class DataManager {
         }
     }
 
-    // Made by Elias (s241121)
     /**
      * Save the projects to the json file
      * @param projects The list of projects
@@ -278,13 +267,11 @@ public class DataManager {
         }
     }
 
-    // Made by Elias (s241121)
     public void saveActivities(List<BaseActivity> activities) {
         saveFixedActivities(activities.stream().filter(activity -> activity instanceof FixedActivity).map(activity -> (FixedActivity) activity).toList());
         saveProjectActivities(activities.stream().filter(activity -> activity instanceof ProjectActivity).map(activity -> (ProjectActivity) activity).toList());
     }
 
-    // Made by Elias (s241121)
     /**
      * Save the fixed activities to the json file
      * @param activities The list of activities
@@ -302,7 +289,6 @@ public class DataManager {
         }
     }
 
-    // Made by Elias (s241121)
     /**
      * Save the project activities to the json file
      * @param activities The list of activities
@@ -320,7 +306,6 @@ public class DataManager {
         }
     }
 
-    // Made by Elias (s241121)
     /**
      * Create default data for the json file
      * @return The default data
@@ -329,7 +314,6 @@ public class DataManager {
         return new JsonArray();
     }
 
-    // Made by Elias (s241121)
     /**
      * Get the instance of DataManager
      * @return The instance of DataManager

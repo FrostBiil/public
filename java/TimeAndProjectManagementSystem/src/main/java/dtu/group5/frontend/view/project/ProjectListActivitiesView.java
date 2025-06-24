@@ -12,19 +12,16 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-// Made By Elias(241121)
 public class ProjectListActivitiesView implements IListView<Project> {
     private final ProjectController controller;
 
     private final ConsolePrinter printer = ConsolePrinter.getInstance();
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-    // Made By Elias(241121)
     public ProjectListActivitiesView(ProjectController controller) {
         this.controller = controller;
     }
 
-    // Made By Elias(241121)
     @Override
     public void runView() {
         printer.printHeader("PROJECT ACTIVITY LIST");
@@ -66,7 +63,6 @@ public class ProjectListActivitiesView implements IListView<Project> {
         input.waitForEnter();
     }
 
-    // Made By Elias(241121)
     @Override
     public List<Project> getList() {
         return controller.getList();

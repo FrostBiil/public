@@ -1,6 +1,5 @@
 package dtu.group5.frontend.util;
 
-// Made by Matthias (s245759)
 public class MenuOption {
   private final String label;
   private final Runnable action;

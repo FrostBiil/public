@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-// Made By Matthias (s245759)
 public class ActivityListFixedView implements IListView<FixedActivity> {
 
   private final ActivityController controller;
@@ -24,7 +23,6 @@ public class ActivityListFixedView implements IListView<FixedActivity> {
     this.controller = controller;
   }
 
-  // Made By Matthias (s245759)
   @Override
   public void runView() {
     printer.printHeader("ACTIVITY LIST");

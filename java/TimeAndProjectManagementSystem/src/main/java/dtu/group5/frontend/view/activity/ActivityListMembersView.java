@@ -10,7 +10,6 @@ import dtu.group5.frontend.view.IListView;
 import java.util.ArrayList;
 import java.util.List;
 
-// Made By Elias (s241121)
 public class ActivityListMembersView implements IListView<BaseActivity> {
     private final ActivityController activityController;
 
@@ -18,12 +17,10 @@ public class ActivityListMembersView implements IListView<BaseActivity> {
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
 
-    // Made By Elias (s241121)
     public ActivityListMembersView(ActivityController activityController) {
         this.activityController = activityController;
     }
 
-    // Made By Elias (s241121)
     @Override
     public void runView() {
         printer.printHeader("ACTIVITY MEMBER LIST");
@@ -63,7 +60,6 @@ public class ActivityListMembersView implements IListView<BaseActivity> {
         input.waitForEnter();
     }
 
-    // Made By Elias (s241121)
     @Override
     public List<BaseActivity> getList() {
         return activityController.getList();

@@ -4,16 +4,13 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Scanner;
 
-// Made by Matthias (s245759)
 public class ConsoleInputHelper {
   public static final ConsoleInputHelper instance = new ConsoleInputHelper();
 
-  // Made by Matthias (s245759)
   private ConsoleInputHelper() {;
     // Private constructor to prevent instantiation
   }
 
-  // Made by Matthias (s245759)
   public static ConsoleInputHelper getInstance() {
     return instance;
   }
@@ -22,12 +19,10 @@ public class ConsoleInputHelper {
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
   private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
-  // Made by Matthias (s245759)
   public <T> T prompt(String prompt, Parser<T> parser, Validator<T> validator, String errorMsg, boolean optional) {
     return prompt(prompt, parser, validator, errorMsg, optional, null);
   }
 
-  // Made by Elias (241121)
   public <T> T prompt(String prompt, Parser<T> parser, Validator<T> validator, String errorMsg, boolean optional, T errorResponse) {
     while (true) {
       System.out.print(prompt + (optional ? " (optional): " : ": "));
@@ -47,7 +42,6 @@ public class ConsoleInputHelper {
     }
   }
 
-  // Made by Elias (241121)
   public<T> T promtList(String prompt, List<T> options, boolean optional) {
     if (options.isEmpty()) {
       printer.printError("No options available.");
@@ -72,7 +66,6 @@ public class ConsoleInputHelper {
     );
   }
 
-  // Made by Matthias (s245759)
   public <T extends Enum<T>> T promptEnum(String prompt, Class<T> enumClass, boolean optional) {
     T[] values = enumClass.getEnumConstants();
 
@@ -97,7 +90,6 @@ public class ConsoleInputHelper {
     );
   }
 
-  // Made by Matthias (s245759)
   public <T> T promptSelection(String prompt, List<T> options, Formatter<T> formatter, boolean optional) {
     if (options.isEmpty()) {
       printer.printError("No options available.");
@@ -122,24 +114,20 @@ public class ConsoleInputHelper {
     );
   }
 
-  // Made by Elias (241121)
   public void waitForEnter() {
     System.out.print(ConsoleColors.CYAN+"Press Enter to continue...");
     scanner.nextLine();
   }
 
-  // Made by Matthias (s245759)
   public interface Formatter<T> {
     String format(T obj);
   }
 
-  // Made by Matthias (s245759)
   @FunctionalInterface
   public interface Parser<T> {
     T parse(String input) throws Exception;
   }
 
-  // Made by Matthias (s245759)
   @FunctionalInterface
   public interface Validator<T> {
     boolean validate(T input);

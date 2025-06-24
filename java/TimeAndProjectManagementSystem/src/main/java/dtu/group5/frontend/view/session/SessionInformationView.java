@@ -5,14 +5,12 @@ import dtu.group5.frontend.util.ConsoleInputHelper;
 import dtu.group5.frontend.util.ConsolePrinter;
 import dtu.group5.frontend.view.IView;
 
-// Made by Elias (241121)
 public class SessionInformationView implements IView {
     Session session = Session.getInstance();
 
     ConsolePrinter printer = ConsolePrinter.getInstance();
     ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-    // Made by Elias (241121)
     @Override
     public void runView() {
         printer.printHeader("SESSION INFORMATION");

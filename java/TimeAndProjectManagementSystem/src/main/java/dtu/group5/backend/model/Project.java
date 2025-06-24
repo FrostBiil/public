@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-// Made by August (241541)
 public class Project implements IModel {
   private final int projectNumber;
   private String title;
@@ -17,13 +16,11 @@ public class Project implements IModel {
 
   private final Set<Coworker> coworkers = new HashSet<>();
 
-  // Made by August (241541)
   public Project(int projectNumber, String title) {
     this.projectNumber = projectNumber;
     this.title = title;
   }
 
-  // Made by August (241541)
   // Constructor for deserialization
   public Project(int projectNumber, String title, String description, Date startDate, Date endDate, Coworker projectLeader, Set<Coworker> coworkers, ProjectStatus status, ProjectType type) {
     this.projectNumber = projectNumber;
@@ -74,18 +71,15 @@ public class Project implements IModel {
     coworkers.add(coworker);
   }
 
-  // Made by Julius (245723)
   public void removeCoworker(Coworker coworker) {
     coworkers.removeIf(c -> c.getInitials().equals(coworker.getInitials()));
   }
 
-  // Made by Elias (241121)
   public enum ProjectStatus {
     NOT_STARTED,
     IN_PROGRESS,
     COMPLETED;
 
-    // Made by Elias (241121)
     public static ProjectStatus fromString(String status) {
         if (status == null)
             return null;
@@ -97,7 +91,6 @@ public class Project implements IModel {
       return null;
     }
 
-    // Made by Elias (241121)
     public String getFormattedName() {
       return this.name().replace("_", " ").toLowerCase();
     }

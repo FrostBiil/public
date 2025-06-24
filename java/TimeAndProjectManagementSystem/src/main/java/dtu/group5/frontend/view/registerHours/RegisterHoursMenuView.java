@@ -7,7 +7,6 @@ import dtu.group5.frontend.view.IView;
 
 import java.util.List;
 
-// Made By Matthias (s245759)
 public class RegisterHoursMenuView implements IMenuView {
   final IView registerWorkedHoursView;
   final IView editWorkedHoursView;
@@ -17,7 +16,6 @@ public class RegisterHoursMenuView implements IMenuView {
 
   private final MenuHandler menuHandler = new MenuHandler();
 
-  // Made By Matthias (s245759)
   public RegisterHoursMenuView(
     IView registerWorkedHoursView,
     IView editWorkedHoursView,
@@ -32,7 +30,6 @@ public class RegisterHoursMenuView implements IMenuView {
     this.listUnregisteredActivitiesView = listUnregisteredActivitiesView;
   }
 
-  // Made By Matthias (s245759)
   @Override
   public void runView() {
     List<MenuOption> options = ( List.of(

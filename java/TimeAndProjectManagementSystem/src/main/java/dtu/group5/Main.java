@@ -66,7 +66,6 @@ import dtu.group5.frontend.view.session.SessionMenuView;
 
 import java.util.List;
 
-// Made by Matthias(s245759)
 public class Main {
   public static void main(String[] args) {
     // Retrieve data from json files

@@ -11,7 +11,6 @@ import dtu.group5.frontend.view.IEditView;
 
 import java.util.Optional;
 
-// Made By Elias(241121)
 public class ProjectAddMemberView implements IEditView<Project> {
     private final ProjectController projectController;
     private final Controller<Coworker> coworkerController;
@@ -20,7 +19,6 @@ public class ProjectAddMemberView implements IEditView<Project> {
     private final ConsolePrinter printer = ConsolePrinter.getInstance();
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-    // Made By Elias(241121)
     public ProjectAddMemberView(Controller<Project> projectController, Controller<Coworker> coworkerController, AssignmentController assignmentController) {
       this.assignmentController = assignmentController;
       // Get ProjectController to use specific methods
@@ -30,13 +28,11 @@ public class ProjectAddMemberView implements IEditView<Project> {
         this.coworkerController = coworkerController;
     }
 
-    // Made By Elias(241121)
     @Override
     public void runView() {
         edit();
     }
 
-    // Made By Elias(241121)
     @Override
     public Project edit() {
         printer.printHeader("ADD PROJECT MEMBER");

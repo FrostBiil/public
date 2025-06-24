@@ -6,14 +6,11 @@ import dtu.group5.database.DataManager;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-// Made by Mattias (s245759)
 public class CoworkerRepository extends BaseRepository<String, Coworker> {
   private static CoworkerRepository instance;
 
-  // Made by Mattias (s245759)
   private CoworkerRepository() { super(); }
 
-  // Made by Mattias (s245759)
   public static synchronized CoworkerRepository getInstance() {
     if (instance == null) {
       instance = new CoworkerRepository();
@@ -21,7 +18,6 @@ public class CoworkerRepository extends BaseRepository<String, Coworker> {
     return instance;
   }
 
-  // Made by Mattias (s245759)
   // Related to the database and is not tested
   public static void initialize(List<Coworker> initialData) {
     getInstance().clear();
@@ -30,7 +26,6 @@ public class CoworkerRepository extends BaseRepository<String, Coworker> {
     }
   }
 
-  // Made by Mattias (s245759)
   @Override
   public boolean add(Coworker coworker) {
     String initials = coworker.getInitials();
@@ -42,7 +37,6 @@ public class CoworkerRepository extends BaseRepository<String, Coworker> {
     return true;
   }
 
-  // Made by Elias (241121)
   // Related to the database and is not tested
   @Override
   public void save() {

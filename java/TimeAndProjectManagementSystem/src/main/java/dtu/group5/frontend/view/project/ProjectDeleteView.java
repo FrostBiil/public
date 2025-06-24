@@ -10,7 +10,6 @@ import dtu.group5.frontend.view.IDeleteView;
 
 import java.util.Optional;
 
-// Made By Elias(241121)
 public class ProjectDeleteView implements IDeleteView {
 
     private final Controller<Project> controller;
@@ -22,13 +21,11 @@ public class ProjectDeleteView implements IDeleteView {
         this.controller = controller;
     }
 
-    // Made By Elias(241121)
     @Override
     public void runView() {
         delete();
     }
 
-    // Made By Elias(241121)
     @Override
     public void delete() {
         printer.printHeader("DELETE PROJECT");

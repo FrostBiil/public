@@ -8,25 +8,21 @@ import dtu.group5.frontend.view.ICreateView;
 
 import java.util.Optional;
 
-// Made By Elias(241121)
 public class ProjectCreateView implements ICreateView<Project> {
   private final Controller<Project> controller;
 
   private final ConsolePrinter printer = ConsolePrinter.getInstance();
   private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-  // Made By Matthias (s245759)
   public ProjectCreateView(Controller<Project> controller) {
     this.controller = controller;
   }
 
-  // Made By Matthias (s245759)
   @Override
   public void runView() {
     create();
   }
 
-  // Made By Matthias (s245759)
   @Override
   public Project create() {
     printer.printHeader("CREATE PROJECT");

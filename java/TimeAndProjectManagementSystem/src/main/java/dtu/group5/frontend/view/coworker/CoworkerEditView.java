@@ -10,7 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-// Made By Elias(s241121)
 public class CoworkerEditView implements IEditView<Coworker> {
     private final Controller<Coworker> controller;
 
@@ -21,13 +20,11 @@ public class CoworkerEditView implements IEditView<Coworker> {
         this.controller = controller;
     }
 
-    // Made By Elias(s241121)
     @Override
     public void runView() {
         edit();
     }
 
-    // Made By Elias(s241121)
     @Override
     public Coworker edit() {
         printer.printHeader("EDIT COWORKER");

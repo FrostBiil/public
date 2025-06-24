@@ -3,14 +3,12 @@ package dtu.group5.backend.model;
 import java.util.HashSet;
 import java.util.Set;
 
-// Made by Elias (241121)
 public abstract class BaseActivity implements IModel {
     private final String title;
     private boolean finished;
     private final Set<Coworker> assignedCoworkers = new HashSet<>();
     private String description;
 
-    // Made by Elias (241121)
     public BaseActivity(String title, boolean finished, String description, Set<Coworker> coworkersToAssign) {
         this.title = title;
         this.finished = finished;
@@ -18,7 +16,6 @@ public abstract class BaseActivity implements IModel {
         this.assignedCoworkers.addAll(coworkersToAssign);
     }
 
-    // Made by Julius (245723
     public boolean isCoworkerAssigned(Coworker coworker) {
         for(Coworker c: assignedCoworkers) {
             if (c.getInitials().equals(coworker.getInitials())) {

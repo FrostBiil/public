@@ -17,17 +17,14 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-// Made by Elias (s241121)
 public class FixedActivityAdapter implements JsonSerializer<FixedActivity>, JsonDeserializer<FixedActivity> {
 
     private final Set<Coworker> loadedCoworkers;
 
-    // Made by Elias (s241121)
     public FixedActivityAdapter(Set<Coworker> loadedCoworkers) {
         this.loadedCoworkers = loadedCoworkers;
     }
 
-    // Made by Elias (s241121)
     @Override
     public JsonElement serialize(FixedActivity activity, Type type, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
@@ -52,7 +49,6 @@ public class FixedActivityAdapter implements JsonSerializer<FixedActivity>, Json
         return jsonObject;
     }
 
-    // Made by Elias (s241121)
     @Override
     public FixedActivity deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
         JsonObject jsonObject = json.getAsJsonObject();
@@ -86,7 +82,6 @@ public class FixedActivityAdapter implements JsonSerializer<FixedActivity>, Json
         return new FixedActivity(title, finished, description, assignedCoworkers, startDate, endDate);
     }
 
-    // Made by Elias (s241121)
     public Date getDateFromString(String dateString) {
         if (dateString == null || dateString.isEmpty()) {
             return null;

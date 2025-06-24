@@ -22,17 +22,14 @@ import java.util.Set;
 import static dtu.group5.backend.util.DateUtil.formatDate;
 import static dtu.group5.backend.util.DateUtil.parseDate;
 
-// Made by Elias (s241121)
 public class ProjectActivityAdapter implements JsonSerializer<ProjectActivity>, JsonDeserializer<ProjectActivity> {
 
     private final Set<Coworker> loadedCoworkers;
 
-    // Made by Elias (s241121)
     public ProjectActivityAdapter(Set<Coworker> loadedCoworkers) {
         this.loadedCoworkers = loadedCoworkers;
     }
 
-    // Made by Elias (s241121)
     @Override
     public JsonElement serialize(ProjectActivity activity, Type type, JsonSerializationContext context) {
         JsonObject jsonObject = new JsonObject();
@@ -73,7 +70,6 @@ public class ProjectActivityAdapter implements JsonSerializer<ProjectActivity>, 
         return jsonObject;
     }
 
-    // Made by Elias (s241121)
     @Override
     public ProjectActivity deserialize(JsonElement json, Type type, JsonDeserializationContext context) throws JsonParseException {
         JsonObject jsonObject = json.getAsJsonObject();

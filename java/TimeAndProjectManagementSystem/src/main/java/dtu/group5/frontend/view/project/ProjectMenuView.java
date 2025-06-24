@@ -15,7 +15,6 @@ import dtu.group5.frontend.view.IView;
 
 import java.util.List;
 
-// Made By Elias(241121)
 public class ProjectMenuView implements IView {
   private final Controller<Project> controller;
 
@@ -34,7 +33,6 @@ public class ProjectMenuView implements IView {
   private final IDeleteView deleteView;
   private final IListView<Project> projectActivityAvailableListView;
 
-  // Made By Elias(241121)
   public ProjectMenuView(Controller<Project> controller, ICreateView<Project> createView, IListView<Project> listView, IEditView<Project> editView, IEditView<Project> addProjectMemberView, IEditView<Project> removeProjectMemberView, IListView<Project> projectMemberListView, IListView<Project> projectActivityListView, IReportView projectReportView, IDeleteView deleteView, IListView<Project> projectActivityAvailableListView) {
     this.controller = controller;
     this.createView = createView;
@@ -48,7 +46,7 @@ public class ProjectMenuView implements IView {
     this.deleteView = deleteView;
     this.projectActivityAvailableListView = projectActivityAvailableListView;
   }
-  // Made By Elias(241121)
+
   @Override
   public void runView() {
     List<MenuOption> options = List.of(

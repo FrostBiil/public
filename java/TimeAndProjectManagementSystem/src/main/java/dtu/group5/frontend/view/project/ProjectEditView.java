@@ -14,24 +14,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-// Made by Elias(241121)
 public class ProjectEditView implements IEditView<Project> {
     private final Controller<Project> controller;
 
     private final ConsolePrinter printer = ConsolePrinter.getInstance();
     private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
 
-    // Made By Elias(241121)
     public ProjectEditView(Controller<Project> controller) {
         this.controller = controller;
     }
 
-    // Made By Elias(241121)
     @Override
     public void runView() {
         edit();
     }
-    // Made By Elias(241121)
+
     @Override
     public Project edit() {
         printer.printHeader("EDIT PROJECT");

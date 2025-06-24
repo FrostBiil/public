@@ -9,7 +9,6 @@ import dtu.group5.frontend.view.IView;
 
 import java.util.List;
 
-// Made by Elias (241121)
 public class SessionMenuView implements IView {
   private final Session session = Session.getInstance();
 
@@ -21,14 +20,12 @@ public class SessionMenuView implements IView {
   private final ConsoleInputHelper input = ConsoleInputHelper.getInstance();
   private final MenuHandler menuHandler = new MenuHandler();
 
-  // Made by Elias (241121)
   public SessionMenuView(IView loginView, IView logoutView, IView sessionInformationView) {
     this.loginView = loginView;
     this.logoutView = logoutView;
     this.sessionInformationView = sessionInformationView;
   }
 
-  // Made by Elias (241121)
   @Override
   public void runView() {
     List<MenuOption> options = ( List.of(
